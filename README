@@ -1,0 +1,28 @@
+patchrom-gnote-AOSP
+===================
+
+[中文]
+
+1. 本项目是为Samsung GALAXY SII移植的第三方MIUI，由本人(郁闷得撞墙) 发起并维护
+   本人未持有 ROM 及其中的软件的版权，请以研究和学习为目的，合法使用，请勿用于任何商业目的
+
+2. 基于SuperNexus I9100 BUILD 5 (17-10-12)
+   http://forum.xda-developers.com/showthread.php?t=1810042
+   感谢Faryaab
+
+3. Bug反馈、功能建议和综合讨论，请访问Miui,
+   http://www.miui.com 或者 http://en.miui.com
+
+
+[English]
+
+1. This is a third-party port MIUI for Samsung GALAXY SII, it's first initiated and maintained by me (ymdzq).
+   I don't own the ROM and the copyright of softwares in this ROM, It can only be used for purposes of research or study,
+   Please obey the local laws and do not use it for any commercial purpose.
+
+2. It base on SuperNexus I9100 BUILD 5 (17-10-12)
+   http://forum.xda-developers.com/showthread.php?t=1810042
+   Big thanks to Faryaab
+
+3. Regarding Issue reporting, feature request and general discussion, please visit Miui forum,
+   http://www.miui.com or http://en.miui.com
