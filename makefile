@@ -17,9 +17,9 @@ local-modified-apps :=
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := SettingsProvider Stk Bluetooth MediaProvider
+local-miui-removed-apps := MediaProvider Stk
 
-local-miui-modified-apps := Settings Phone Mms ThemeManager
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
 
 include phoneapps.mk
 
@@ -41,6 +41,8 @@ pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	@echo Update boot image
 	cp other/boot.img $(ZIP_DIR)/boot.img
+#	@echo Add Cusettings
+#	cp other/Cusettings.apk $(ZIP_DIR)/system/app/Cusettings.apk
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	rm -rf $(pre_install_data_packages)

@@ -4,4 +4,5 @@
     <bool name="has_led">false</bool>
     <bool name="mass_storage_enable">false</bool>
     <bool name="has_volume_wake">true</bool>
+    <bool name="stat_internal_sdcard_info">true</bool>
 </resources>

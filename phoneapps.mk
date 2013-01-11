@@ -11,7 +11,6 @@ local-phone-apps = ApplicationsProvider \
                    HTMLViewer \
                    InputDevices \
                    KeyChain \
-                   LiveWallpapers \
                    LiveWallpapersPicker \
                    MagicSmokeWallpapers \
                    MediaProvider \
@@ -20,12 +19,9 @@ local-phone-apps = ApplicationsProvider \
                    PhaseBeam \
                    PicoTts \
                    SamsungServiceMode \
-                   SettingsProvider \
                    SharedStorageBackup \
 				   Stk \
                    TvOut \
                    UserDictionaryProvider \
-                   VideoEditor \
                    VisualizationWallpapers \
-                   VoiceDialer \
                    WAPPushManager
