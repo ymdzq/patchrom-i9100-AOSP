@@ -64,7 +64,6 @@ out/framework2.jar : out/framework.jar
 	#adb reboot
 
 %.sign-plat : out/%
-#%.sign-plat : /home/gexudong/libra.jbmiui/out/target/product/maguro/system/app/%
 	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
 	@echo push -- to --- phone
 	adb remount

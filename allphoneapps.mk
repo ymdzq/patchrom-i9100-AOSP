@@ -1,11 +1,12 @@
 local-phone-apps = ApplicationsProvider \
                    BackupRestoreConfirmation \
                    Bluetooth \
-		   Browser \
-		   Calculator \
-		   Calendar \
-		   CalendarProvider \
+                   Browser \
+                   Calculator \
+                   Calendar \
+                   CalendarProvider \
                    CertInstaller \
+                   ChromeBookmarksSyncAdapter \
                    Contacts \
                    ContactsProvider \
                    DefaultContainerService \
@@ -15,9 +16,20 @@ local-phone-apps = ApplicationsProvider \
                    DrmProvider \
                    Email \
                    Exchange2 \
+                   FaceLock \
                    Galaxy4 \
                    GalaxyS2Settings \
                    Gallery2 \
+                   GenieWidget \
+                   GoogleBackupTransport \
+                   GoogleCalendarSyncAdapter \
+                   GoogleContactsSyncAdapter \
+                   GoogleEars \
+                   GoogleFeedback \
+                   GoogleLoginService \
+                   GooglePartnerSetup \
+                   GoogleServicesFramework \
+                   GoogleTTS \
                    HoloSpiralWallpaper \
                    HTMLViewer \
                    InputDevices \
@@ -28,29 +40,38 @@ local-phone-apps = ApplicationsProvider \
                    LiveWallpapersPicker \
                    MagicSmokeWallpapers \
                    MediaProvider \
+                   MediaUploader \
+                   Microbes \
                    Mms \
                    Music \
                    MusicFX \
+                   NetworkLocation \
                    NoiseField \
+                   OneTimeInitializer \
                    PackageInstaller \
                    PhaseBeam \
                    Phone \
+                   Phonesky \
                    PicoTts \
-                   Provision \
                    QuickSearchBox \
                    SamsungServiceMode \
                    Settings \
                    SettingsProvider \
+                   SetupWizard \
                    SharedStorageBackup \
                    SoundRecorder \
 				   Stk \
                    Superuser \
                    SystemUI \
+                   Talk \
+                   Talkback \
                    TelephonyProvider \
+                   Thinkfree \
                    TvOut \
                    UserDictionaryProvider \
                    VideoEditor \
                    VisualizationWallpapers \
                    VoiceDialer \
+                   VoiceSearchStub \
                    VpnDialogs \
                    WAPPushManager

@@ -1,9 +1,9 @@
 local-phone-apps = ApplicationsProvider \
                    BackupRestoreConfirmation \
-                   Bluetooth \
                    CertInstaller \
                    DefaultContainerService \
                    DrmProvider \
+                   FaceLock \
                    Galaxy4 \
                    GalaxyS2Settings \
                    Gallery2 \
