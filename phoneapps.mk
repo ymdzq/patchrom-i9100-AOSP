@@ -17,7 +17,6 @@ local-phone-apps = ApplicationsProvider \
                    MusicFX \
                    NoiseField \
                    PhaseBeam \
-                   PicoTts \
                    SamsungServiceMode \
                    SharedStorageBackup \
 				   Stk \
