@@ -58,6 +58,7 @@ system/app/PhaseBeam.apk 0 0 644
 system/app/Phone.apk 0 0 644
 system/app/Phonesky.apk 0 0 644
 system/app/PicoTts.apk 0 0 644
+system/app/Provision.apk 0 0 644
 system/app/QuickSearchBox.apk 0 0 644
 system/app/SamsungServiceMode.apk 0 0 644
 system/app/Settings.apk 0 0 644

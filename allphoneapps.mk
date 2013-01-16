@@ -53,6 +53,7 @@ local-phone-apps = ApplicationsProvider \
                    Phone \
                    Phonesky \
                    PicoTts \
+                   Provision \
                    QuickSearchBox \
                    SamsungServiceMode \
                    Settings \
