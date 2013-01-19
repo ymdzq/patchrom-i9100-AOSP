@@ -43,6 +43,9 @@ local-pre-zip-misc:
 	cp other/boot.img $(ZIP_DIR)/boot.img
 #	@echo Add Cusettings
 #	cp other/Cusettings.apk $(ZIP_DIR)/system/app/Cusettings.apk
+	@echo Add USB_switcher
+	cp other/USB_switcher.apk $(ZIP_DIR)/system/app/USB_switcher.apk
+	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	rm -rf $(pre_install_data_packages)
