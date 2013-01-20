@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="needsEarlyVideoSize">true</bool>
+    <bool name="needsSamsungCamMode">true</bool>
+    <bool name="needsHTCCamMode">false</bool>
+    <bool name="hasSamsungCamSettings">true</bool>
+    <bool name="wantsFocusModes">false</bool>
+    <bool name="usePreferredPreviewSizeForEffects">false</bool>
+    <bool name="ignorePreferredPreviewSizeForVideo">false</bool>
+    <bool name="noFaceDetectOnFrontCamera">false</bool>
+    <bool name="noFaceDetectOnRearCamera">false</bool>
+    <bool name="enableZSL">false</bool>
+    <bool name="resetVideoRotationParameter">false</bool>
+    <bool name="previewStopsDuringSnapshot">false</bool>
+    <bool name="show_action_bar_title">false</bool>
+    <bool name="picker_is_dialog">false</bool>
+</resources>

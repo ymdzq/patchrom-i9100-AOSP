@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.RotateImageView android:id="@id/thumbnail" android:background="@drawable/border_last_picture" android:focusable="false" android:visibility="gone" android:clickable="true" android:onClick="onThumbnailClicked" android:contentDescription="@string/accessibility_review_thumbnail" style="@style/ReviewThumbnail"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

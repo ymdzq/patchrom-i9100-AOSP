@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9100.zip
 local-previous-target-dir := ~/workspace/ota_base/i9100
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps :=
+local-modified-apps := Gallery2
 
 local-modified-jars :=
 

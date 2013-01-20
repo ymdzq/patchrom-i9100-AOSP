@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.RotateLayout android:id="@id/on_screen_indicators" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/OnScreenIndicators"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/onscreen_indicators_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/onscreen_flash_indicator" android:visibility="visible" style="@style/OnScreenIndicator" />
+            <ImageView android:id="@id/onscreen_timer_indicator" android:visibility="visible" style="@style/OnScreenIndicator" />
+            <ImageView android:id="@id/onscreen_white_balance_indicator" style="@style/OnScreenIndicator" />
+            <TextView android:textSize="@dimen/onscreen_exposure_indicator_text_size" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/onscreen_exposure_indicator" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" style="@style/OnScreenIndicator" />
+            <ImageView android:id="@id/onscreen_scene_indicator" android:src="@drawable/ic_indicators_scn" style="@style/OnScreenIndicator" />
+            <ImageView android:id="@id/onscreen_gps_indicator" style="@style/OnScreenIndicator" />
+            <ImageView android:id="@id/onscreen_focus_indicator" style="@style/OnScreenIndicator" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.android.camera.ui.RotateLayout>

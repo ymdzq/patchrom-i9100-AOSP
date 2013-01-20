@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.ControlPanelLayout android:background="@drawable/bg_camera_pattern" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/control_panel_min_length"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/review_thumbnail" />
+    <include layout="@layout/review_control" />
+    <com.android.camera.ui.IndicatorControlWheelContainer android:id="@id/indicator_control" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <com.android.camera.ShutterButton android:id="@id/shutter_button" android:background="@drawable/btn_shutter" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:contentDescription="@string/accessibility_shutter_button" />
+        <com.android.camera.ui.IndicatorControlWheel android:id="@id/indicator_control_wheel" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.android.camera.ui.ZoomControlWheel android:id="@id/zoom_control" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.android.camera.ui.IndicatorControlWheel>
+    </com.android.camera.ui.IndicatorControlWheelContainer>
+    <include layout="@layout/mode_picker" />
+</com.android.camera.ui.ControlPanelLayout>

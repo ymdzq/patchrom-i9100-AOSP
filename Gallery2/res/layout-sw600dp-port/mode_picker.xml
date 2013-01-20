@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ModePicker android:id="@id/mode_picker" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/current_mode_bar" android:background="@color/review_control_pressed_color" android:layout_width="4.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_alignParentLeft="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/mode_selection" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/mode_picker_margin" android:layout_marginBottom="@dimen/mode_picker_margin" android:layout_toRightOf="@id/current_mode_bar">
+        <com.android.camera.ui.RotateImageView android:id="@id/mode_camera" android:background="@drawable/bg_pressed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_switch_camera_holo_light" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/accessibility_switch_to_camera" />
+        <com.android.camera.ui.RotateImageView android:id="@id/mode_video" android:background="@drawable/bg_pressed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_switch_video_holo_light" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/accessibility_switch_to_video" />
+        <com.android.camera.ui.RotateImageView android:id="@id/mode_panorama" android:background="@drawable/bg_pressed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_switch_pan_holo_light" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/accessibility_switch_to_panorama" />
+    </LinearLayout>
+</com.android.camera.ModePicker>
