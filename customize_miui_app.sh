@@ -39,3 +39,8 @@ if [ $1 = "MiuiHome" ];then
 
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
+if [ $1 = "Provision" ];then
+    $XMLMERGYTOOL $1/res/drawable-hdpi $2/res/drawable-hdpi
+    $XMLMERGYTOOL $1/res/drawable-zh-rCN-hdpi $2/res/drawable-zh-rCN-hdpi
+    $XMLMERGYTOOL $1/res/drawable-zh-rTW-hdpi $2/res/drawable-zh-rTW-hdpi
+fi
