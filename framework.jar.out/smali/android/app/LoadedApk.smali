@@ -43,7 +43,7 @@
 
 .field private final mLibDir:Ljava/lang/String;
 
-.field final mPackageName:Ljava/lang/String;
+.field public final mPackageName:Ljava/lang/String;
 
 .field private final mReceivers:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
