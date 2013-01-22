@@ -19,7 +19,7 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "com.android.camera.CameraLauncher"
+    const-string v2, "com.android.camera"
 
     aput-object v2, v0, v1
 
