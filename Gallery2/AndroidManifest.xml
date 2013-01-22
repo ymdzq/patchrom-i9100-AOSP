@@ -137,7 +137,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity-alias android:label="@string/camera_label" android:icon="@mipmap/ic_launcher_camera" android:name="com.android.camera.CameraLauncher" android:targetActivity="com.android.camera.Camera">
+        <activity-alias android:label="@string/camera_label" android:icon="@mipmap/ic_launcher_camera" android:name="com.android.camera" android:targetActivity="com.android.camera.Camera">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
