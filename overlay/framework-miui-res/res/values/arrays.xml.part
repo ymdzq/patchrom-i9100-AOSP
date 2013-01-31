@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array translatable="false" name="patchrom_component_name_map">
+        <item>com.android.camera/com.android.camera.Camera=com.android.gallery3d/com.android.camera</item>
+    </string-array>
+</resources>
