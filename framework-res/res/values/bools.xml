@@ -56,7 +56,7 @@
     <bool name="config_alwaysUseCdmaRssi">false</bool>
     <bool name="config_duplicate_port_omadm_wappush">false</bool>
     <bool name="config_showNavigationBar">false</bool>
-    <bool name="config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_actionMenuItemAllCaps">false</bool>
     <bool name="config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="config_wimaxEnabled">false</bool>
     <bool name="config_enableDreams">false</bool>
