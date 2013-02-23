@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>アメリカ</item>
+        <item>ヨーロッパ</item>
+        <item>アフリカ</item>
+        <item>アジア</item>
+        <item>オーストラリア</item>
+        <item>太平洋</item>
+        <item>すべて</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15秒</item>
+        <item>30秒</item>
+        <item>1分</item>
+        <item>2分</item>
+        <item>5分</item>
+        <item>10分</item>
+        <item>30分</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>起動しない</item>
+        <item>15秒</item>
+        <item>30秒</item>
+        <item>1分</item>
+        <item>2分</item>
+        <item>5分</item>
+        <item>10分</item>
+        <item>30分</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>今すぐ</item>
+        <item>5秒</item>
+        <item>15秒</item>
+        <item>30秒</item>
+        <item>1分</item>
+        <item>2分</item>
+        <item>5分</item>
+        <item>10分</item>
+        <item>30分</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>小</item>
+        <item>中</item>
+        <item>大</item>
+        <item>極大</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>非常に遅い</item>
+        <item>遅い</item>
+        <item>標準</item>
+        <item>速い</item>
+        <item>非常に速い</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>非常に低い</item>
+        <item>低い</item>
+        <item>標準</item>
+        <item>高い</item>
+        <item>非常に高い</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>スキャン中...</item>
+        <item>接続中...</item>
+        <item>認証中...</item>
+        <item>IPアドレスを取得中...</item>
+        <item>接続済み</item>
+        <item>保留中</item>
+        <item>切断中...</item>
+        <item>切断されました</item>
+        <item>失敗しました</item>
+        <item>ブロック中</item>
+        <item>接続不良により一時的に無効</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>スキャン中...</item>
+        <item>%1$sに接続中...</item>
+        <item>%1$sによる認証中...</item>
+        <item>IPアドレスを%1$sから取得中...</item>
+        <item>%1$sに接続しました</item>
+        <item>保留中</item>
+        <item>%1$sから切断中...</item>
+        <item>切断されました</item>
+        <item>失敗しました</item>
+        <item>ブロック中</item>
+        <item>接続不良により一時的に無効</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>ボタンを押す</item>
+        <item>ピアデバイスのPIN</item>
+        <item>このデバイスのPIN</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>接続済み</item>
+        <item>招待済み</item>
+        <item>失敗しました</item>
+        <item>利用可能</item>
+        <item>圏外</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2分</item>
+        <item>5分</item>
+        <item>1時間</item>
+        <item>タイムアウトしない</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>弱</item>
+        <item>中</item>
+        <item>強</item>
+        <item>非常に強い</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>常に使用する</item>
+        <item>電源接続時にのみ使用する</item>
+        <item>使用しない（データ使用量が増加）</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>常に使用</item>
+        <item>電源接続時にのみ使用する</item>
+        <item>使用しない</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>自動</item>
+        <item>5 GHzのみ</item>
+        <item>2.4 GHzのみ</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>使用時間</item>
+        <item>起動回数</item>
+        <item>アプリ名</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>なし</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>静的</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>なし</item>
+        <item>手動</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>OFF</item>
+        <item>アラート</item>
+        <item>バイブレーション</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>なし</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAPまたはCHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>指定なし</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>内部端末ストレージ</item>
+        <item>リムーバブルSDカード</item>
+        <item>システムで判断する</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>短め</item>
+        <item>中</item>
+        <item>長め</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>チェックしない</item>
+        <item>DRMコンテンツのみをチェック</item>
+        <item>常にチェック</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>HDCPチェックを使用しない</item>
+        <item>DRMコンテンツにのみHDCPチェックを使用する</item>
+        <item>HDCPチェックを常に使用する</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>アニメーションオフ</item>
+        <item>アニメーションスケール.5x</item>
+        <item>アニメーションスケール1x</item>
+        <item>アニメーションスケール1.5x</item>
+        <item>アニメーションスケール2x</item>
+        <item>アニメーションスケール5x</item>
+        <item>アニメーションスケール10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>アニメーションオフ</item>
+        <item>アニメーションスケール.5x</item>
+        <item>アニメーションスケール1x</item>
+        <item>アニメーションスケール1.5x</item>
+        <item>アニメーションスケール2x</item>
+        <item>アニメーションスケール5x</item>
+        <item>アニメーションスケール10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>アニメーションオフ</item>
+        <item>アニメーションスケール.5x</item>
+        <item>アニメーションスケール1x</item>
+        <item>アニメーションスケール1.5x</item>
+        <item>アニメーションスケール2x</item>
+        <item>アニメーションスケール5x</item>
+        <item>アニメーションスケール10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>標準の上限</item>
+        <item>バックグラウンドプロセスを使用しない</item>
+        <item>プロセスの上限: 1</item>
+        <item>プロセスの上限: 2</item>
+        <item>プロセスの上限: 3</item>
+        <item>プロセスの上限: 4</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>事前共有鍵付きのL2TP/IPSec VPN</item>
+        <item>証明書付きのL2TP/IPSec VPN</item>
+        <item>事前共有鍵とXauth認証付きのIPSec VPN</item>
+        <item>証明書とXauth認証付きのIPSec VPN</item>
+        <item>証明書とハイブリッド認証付きのIPSec VPN</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>切断されました</item>
+        <item>初期化中...</item>
+        <item>接続中...</item>
+        <item>接続されました</item>
+        <item>タイムアウト</item>
+        <item>失敗しました</item>
+    </string-array>
+</resources>

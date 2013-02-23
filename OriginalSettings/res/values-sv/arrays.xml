@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>Amerika</item>
+        <item>Europa</item>
+        <item>Afrika</item>
+        <item>Asien</item>
+        <item>Australien</item>
+        <item>Stilla havet</item>
+        <item>Alla</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekunder</item>
+        <item>30 sekunder</item>
+        <item>1 minut</item>
+        <item>2 minuter</item>
+        <item>5 minuter</item>
+        <item>10 minuter</item>
+        <item>30 minuter</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Aldrig</item>
+        <item>15 sekunder</item>
+        <item>30 sekunder</item>
+        <item>1 minut</item>
+        <item>2 minuter</item>
+        <item>5 minuter</item>
+        <item>10 minuter</item>
+        <item>30 minuter</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Omedelbart</item>
+        <item>5 sekunder</item>
+        <item>15 sekunder</item>
+        <item>30 sekunder</item>
+        <item>1 minut</item>
+        <item>2 minuter</item>
+        <item>5 minuter</item>
+        <item>10 minuter</item>
+        <item>30 minuter</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Liten</item>
+        <item>Normal</item>
+        <item>Stor</item>
+        <item>Mycket stor</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Mycket långsam</item>
+        <item>Långsam</item>
+        <item>Normal</item>
+        <item>Snabb</item>
+        <item>Mycket snabb</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>Mycket låg</item>
+        <item>Låg</item>
+        <item>Normal</item>
+        <item>Hög</item>
+        <item>Mycket hög</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Skannar…</item>
+        <item>Ansluter…</item>
+        <item>Autentiserar…</item>
+        <item>Erhåller IP-adress…</item>
+        <item>Ansluten</item>
+        <item>Pausad</item>
+        <item>Kopplar ifrån…</item>
+        <item>Frånkopplad</item>
+        <item>Misslyckades</item>
+        <item>Blockerat</item>
+        <item>Undviker just nu dålig anslutning</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Skannar…</item>
+        <item>Ansluter till %1$s…</item>
+        <item>Autentiserar med %1$s…</item>
+        <item>Hämtar IP-adress från %1$s…</item>
+        <item>Ansluten till: %1$s</item>
+        <item>Pausad</item>
+        <item>Kopplar ifrån %1$s…</item>
+        <item>Frånkopplad</item>
+        <item>Misslyckades</item>
+        <item>Blockerat</item>
+        <item>Undviker just nu dålig anslutning</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Tryckknapp</item>
+        <item>PIN-kod från den andra enheten</item>
+        <item>PIN-kod från enheten</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Ansluten</item>
+        <item>Inbjuden</item>
+        <item>Misslyckades</item>
+        <item>Tillgänglig</item>
+        <item>Utanför intervallet</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 minuter</item>
+        <item>5 minuter</item>
+        <item>1 timme</item>
+        <item>Ange aldrig tidsgräns</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Dålig</item>
+        <item>Ganska bra</item>
+        <item>Bra</item>
+        <item>Utmärkt</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Alltid</item>
+        <item>Endast när den är inkopplad</item>
+        <item>Aldrig (ökar dataanvändningen)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Alltid</item>
+        <item>Endast när den är inkopplad</item>
+        <item>Aldrig</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Automatiskt</item>
+        <item>Endast 5 GHz</item>
+        <item>Endast 2,4 GHz</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Användningstid</item>
+        <item>Starta räkneverk</item>
+        <item>Appnamn</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Inga</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Statisk</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Ingen</item>
+        <item>Manuell</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Av</item>
+        <item>Varning</item>
+        <item>Vibrera</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Inga</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP eller CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Ej angiven</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Lagring på intern enhet</item>
+        <item>Flyttbart SD-kort</item>
+        <item>Låt systemet bestämma</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Kort</item>
+        <item>Mellan</item>
+        <item>Lång</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Kontrollera aldrig</item>
+        <item>Kontrollera bara DRM-innehåll</item>
+        <item>Kontrollera alltid</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Använd aldrig HDCP-kontroll</item>
+        <item>Använd bara HDCP-kontroll för DRM-innehåll</item>
+        <item>Använd alltid HDCP-kontroll</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animering avstängd</item>
+        <item>Animering i skala 0,5x</item>
+        <item>Animering i skala 1x</item>
+        <item>Animering i skala 1,5x</item>
+        <item>Animering i skala 2x</item>
+        <item>Animering i skala 5x</item>
+        <item>Animering i skala 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animering avstängd</item>
+        <item>Animering i skala 0,5x</item>
+        <item>Animering i skala 1x</item>
+        <item>Animering i skala 1,5x</item>
+        <item>Animering i skala 2x</item>
+        <item>Animering i skala 5x</item>
+        <item>Animering i skala 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>Animering avstängd</item>
+        <item>Animering i skala 0,5x</item>
+        <item>Animering i skala 1x</item>
+        <item>Animering i skala 1,5x</item>
+        <item>Animering i skala 2x</item>
+        <item>Animering i skala 5x</item>
+        <item>Animering i skala 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Standardgräns</item>
+        <item>Inga bakgrundsprocesser</item>
+        <item>Högst 1 process</item>
+        <item>Högst 2 processer</item>
+        <item>Högst 3 processer</item>
+        <item>Högst 4 processer</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP-VPN</item>
+        <item>L2TP-/IPSec-VPN med nycklar som delats i förväg</item>
+        <item>L2TP-/IPSec-VPN med certifikat</item>
+        <item>IPSec-VPN med nycklar som delats i förväg och Xauth-autentisering</item>
+        <item>IPSec-VPN med certifikat och Xauth-autentisering</item>
+        <item>IPSec-VPN med certifikat och dubbel autentisering</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Frånkopplad</item>
+        <item>Initierar...</item>
+        <item>Ansluter...</item>
+        <item>Anslutet</item>
+        <item>Tidsgräns</item>
+        <item>Misslyckades</item>
+    </string-array>
+</resources>

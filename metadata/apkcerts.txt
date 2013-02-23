@@ -79,3 +79,4 @@ name="VpnDialogs.apk" certificate="build/target/product/security/platform.x509.p
 name="WAPPushManager.apk" certificate="PRESIGNED" private_key=""
 name="MiuiLockv4.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="USB_switcher.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="OriginalSettings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"

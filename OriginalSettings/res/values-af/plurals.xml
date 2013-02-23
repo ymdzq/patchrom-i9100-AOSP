@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Wagwoord moet ten minste %d letters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 letter bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Wagwoord moet ten minste %d onderkas-letters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 onderkas-letter bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Wagwoord moet ten minste %d bokas-letters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 bokas-letter bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Wagwoord moet ten minste %d syfers bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 syfer bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Wagwoord moet ten minste %d spesiale simbole bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 spesiale simbool bevat.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Wagwoord moet ten minste %d nieletter-karakters bevat.</item>
+        <item quantity="one">Wagwoord moet ten minste 1 nieletter-karakter bevat.</item>
+    </plurals>
+</resources>
