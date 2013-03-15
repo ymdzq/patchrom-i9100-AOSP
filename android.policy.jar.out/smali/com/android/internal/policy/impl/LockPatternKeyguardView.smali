@@ -71,7 +71,7 @@
 
 .field private mShowLockBeforeUnlock:Z
 
-.field private mSuppressBiometricUnlock:Z
+.field public mSuppressBiometricUnlock:Z
 
 .field private mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
