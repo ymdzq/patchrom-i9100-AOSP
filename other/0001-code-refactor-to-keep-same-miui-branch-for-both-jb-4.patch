@@ -1,0 +1,61 @@
+From e577b8c7a995cb141fa14376c32db0781f10336d Mon Sep 17 00:00:00 2001
+From: yumingyang <yumingyang@xiaomi.com>
+Date: Wed, 13 Mar 2013 19:12:22 +0800
+Subject: [PATCH 01/10] code refactor to keep same miui branch for both jb 4.1
+ and 4.2
+
+N/A
+
+Change-Id: I33b0ae788e8a06df411462a970551e7802d23425
+Ref-Id: I769c490443b08c109c04b5f255e3c64b2721505c
+
+Signed-off-by: santajin <zj1860263@163.com>
+---
+ .../internal/policy/impl/PhoneWindowManager.smali  |   31 ++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+diff --git a/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindowManager.smali b/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindowManager.smali
+index fa5ccff..204755b 100644
+--- a/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindowManager.smali
++++ b/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindowManager.smali
+@@ -13010,6 +13010,37 @@
+     return-void
+ .end method
+ 
++.method setMaxBacklightBrightness()V
++    .locals 2
++
++    .prologue
++    const-string v1, "power"
++
++    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
++
++    move-result-object v1
++
++    invoke-static {v1}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
++
++    move-result-object v0
++
++    .local v0, power:Landroid/os/IPowerManager;
++    const/16 v1, 0xff
++
++    :try_start_0
++    invoke-interface {v0, v1}, Landroid/os/IPowerManager;->setBacklightBrightness(I)V
++    :try_end_0
++    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
++
++    :goto_0
++    return-void
++
++    :catch_0
++    move-exception v1
++
++    goto :goto_0
++.end method
++
+ .method setPowerLongPress(Ljava/lang/Runnable;)V
+     .locals 0
+     .parameter "value"
+-- 
+1.7.9.5
+
