@@ -386,9 +386,9 @@
 
     .line 1853
     :cond_1
-    new-instance v1, Lcom/android/internal/app/ActionBarImpl;
+    invoke-static {p0}, Landroid/app/Activity$Injector;->generateActionBar(Landroid/app/Activity;)Lcom/android/internal/app/ActionBarImpl;
 
-    invoke-direct {v1, p0}, Lcom/android/internal/app/ActionBarImpl;-><init>(Landroid/app/Activity;)V
+    move-result-object v1
 
     iput-object v1, p0, Landroid/app/Activity;->mActionBar:Lcom/android/internal/app/ActionBarImpl;
 
@@ -2565,6 +2565,35 @@
     goto :goto_0
 .end method
 
+.method public getMiuiActionBar()Lmiui/v5/app/MiuiActionBar;
+    .locals 2
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    .local v0, bar:Landroid/app/ActionBar;
+    instance-of v1, v0, Lmiui/v5/app/MiuiActionBar;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lmiui/v5/app/MiuiActionBar;
+
+    .end local v0           #bar:Landroid/app/ActionBar;
+    :goto_0
+    return-object v0
+
+    .restart local v0       #bar:Landroid/app/ActionBar;
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public final getParent()Landroid/app/Activity;
     .locals 1
 
@@ -3675,7 +3704,8 @@
     .line 888
     iput-boolean v3, p0, Landroid/app/Activity;->mCalled:Z
 
-    .line 889
+    invoke-static {p0}, Landroid/app/Activity$Injector;->setActivityGravity(Landroid/app/Activity;)V
+
     return-void
 
     .line 878
@@ -5485,6 +5515,8 @@
 
     invoke-static {p0}, Landroid/app/Activity$Injector;->checkAccessControl(Landroid/app/Activity;)V
 
+    invoke-static {p0}, Landroid/app/Activity$Injector;->setActivityGravity(Landroid/app/Activity;)V
+
     return-void
 .end method
 
@@ -5736,7 +5768,9 @@
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {p0, p1}, Landroid/app/Activity$Injector;->onOptionsItemSelected(Landroid/app/Activity;Landroid/view/MenuItem;)Z
+
+    move-result v0
 
     goto :goto_0
 .end method
@@ -6595,6 +6629,8 @@
     .end local v0           #i:I
     .end local v1           #lm:Landroid/app/LoaderManagerImpl;
     :cond_1
+    invoke-static {p0}, Landroid/app/Activity$Injector;->onWindowShow(Landroid/app/Activity;)V
+
     return-void
 .end method
 

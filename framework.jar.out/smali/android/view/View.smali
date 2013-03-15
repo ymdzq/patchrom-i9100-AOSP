@@ -686,6 +686,12 @@
 
 .field mAccessibilityViewId:I
 
+.field mAdditionalState:I
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private mAnimator:Landroid/view/ViewPropertyAnimator;
 
 .field mAttachInfo:Landroid/view/View$AttachInfo;
@@ -1840,7 +1846,8 @@
     :goto_0
     iput-object v0, p0, Landroid/view/View;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    .line 3699
+    iput v2, p0, Landroid/view/View;->mAdditionalState:I
+
     iput-object v1, p0, Landroid/view/View;->mResources:Landroid/content/res/Resources;
 
     .line 3700
@@ -1940,7 +1947,8 @@
     :goto_0
     iput-object v0, p0, Landroid/view/View;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    .line 3227
+    iput v3, p0, Landroid/view/View;->mAdditionalState:I
+
     iput-object p1, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     .line 3228
@@ -3763,6 +3771,14 @@
     .prologue
     .line 659
     invoke-direct {p0, p1}, Landroid/view/View;->checkForLongClick(I)V
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    move/from16 v2, p3
+
+    invoke-static {v0, v1, v2}, Landroid/view/View$Injector;->initializeChildrenSequenceStates(Landroid/view/View;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
@@ -14856,6 +14872,31 @@
     return-void
 .end method
 
+.method fillAdditionalState([I)[I
+    .locals 2
+    .parameter "states"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    move-object v0, p1
+
+    .local v0, newStates:[I
+    iget v1, p0, Landroid/view/View;->mAdditionalState:I
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Landroid/view/View;->mAdditionalState:I
+
+    invoke-static {v0, v1}, Lmiui/util/UiUtils;->getViewStates([II)[I
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
 .method public findFocus()Landroid/view/View;
     .locals 1
 
@@ -15020,6 +15061,8 @@
     .line 14772
     :goto_0
     return-object v0
+
+    invoke-static {p0, v0}, Landroid/view/View$Injector;->onDrawableStateChanged(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewByAccessibilityIdTraversal(I)Landroid/view/View;
@@ -22991,6 +23034,10 @@
 
     .line 14099
     .local v0, drawableState:[I
+    invoke-virtual {p0, v0}, Landroid/view/View;->fillAdditionalState([I)[I
+
+    move-result-object v0
+
     if-eqz p1, :cond_0
 
     .line 14104
@@ -28603,6 +28650,30 @@
 
     .line 14568
     goto :goto_1
+.end method
+
+.method public setAdditionalState(I)V
+    .locals 1
+    .parameter "state"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget v0, p0, Landroid/view/View;->mAdditionalState:I
+
+    if-eq p1, v0, :cond_0
+
+    iput p1, p0, Landroid/view/View;->mAdditionalState:I
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
+
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
+
+    :cond_0
+    return-void
 .end method
 
 .method public setAlpha(F)V
