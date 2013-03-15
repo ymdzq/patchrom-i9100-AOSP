@@ -169,7 +169,7 @@
 
     if-nez v3, :cond_2
 
-    const v2, 0x60c0191
+    const v2, 0x60c01aa
 
     .line 214
     .local v2, shutdownMessageId:I
