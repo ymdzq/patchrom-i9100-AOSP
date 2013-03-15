@@ -337,8 +337,10 @@
 
     .line 300
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+    new-instance v0, Lcom/android/internal/policy/impl/MiuiKeyguardUpdateMonitor;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/MiuiKeyguardUpdateMonitor;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -1205,7 +1207,7 @@
     .line 1183
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->playSounds(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->playSounds(Z)V
 
     .line 1186
     :cond_1
@@ -1486,7 +1488,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->playSounds(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->playSounds(Z)V
 
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
@@ -1842,7 +1844,7 @@
     throw v0
 .end method
 
-.method private playSounds(Z)V
+.method protected playSounds(Z)V
     .locals 8
     .parameter "locked"
 
@@ -3350,6 +3352,20 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_2
+.end method
+
+.method suppressNextLockSound()V
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
+
+    return-void
 .end method
 
 .method public verifyUnlock(Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;)V
