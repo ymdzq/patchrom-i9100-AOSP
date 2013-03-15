@@ -9804,6 +9804,10 @@
     .line 7587
     const/4 v5, 0x0
 
+    const/4 v6, 0x0
+
+    iput-boolean v6, p0, Lcom/android/server/wm/WindowManagerService;->mSafeMode:Z
+
     :try_start_0
     invoke-virtual {v3, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
