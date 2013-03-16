@@ -536,6 +536,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/graphics/drawable/AnimatedRotateDrawable$Injector;->init(Landroid/graphics/drawable/AnimatedRotateDrawable;Landroid/content/res/Resources;Landroid/util/AttributeSet;)V
 
+    .line 239
     const/4 v14, 0x1
 
     const/4 v15, 0x0

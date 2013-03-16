@@ -1990,6 +1990,8 @@
 
     iput v1, p0, Landroid/widget/AbsListView;->mDensityScale:F
 
+    invoke-static {p0}, Landroid/widget/AbsListView$Injector;->setChildSequenceStateTaggingListener(Landroid/widget/AbsListView;)V
+
     .line 819
     return-void
 .end method
@@ -4843,40 +4845,34 @@
 
     if-eqz v8, :cond_4
 
-    .line 3804
     iget v6, p0, Landroid/widget/AbsListView;->mScrollY:I
 
-    .line 3805
     .restart local v6       #scrollY:I
     if-eqz v6, :cond_5
 
-    .line 3807
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v4
 
-    .line 3808
     .restart local v4       #restoreCount:I
     int-to-float v8, v6
 
     invoke-virtual {p1, v10, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 3809
     iget-object v8, p0, Landroid/widget/AbsListView;->mFastScroller:Landroid/widget/FastScroller;
 
     invoke-virtual {v8, p1}, Landroid/widget/FastScroller;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3810
     invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 3815
     .end local v4           #restoreCount:I
     .end local v6           #scrollY:I
     :cond_4
     :goto_0
+    invoke-static {p0, p1}, Landroid/widget/AbsListView$Injector;->drawBorder(Landroid/widget/AbsListView;Landroid/graphics/Canvas;)V
+
     return-void
 
-    .line 3812
     .restart local v6       #scrollY:I
     :cond_5
     iget-object v8, p0, Landroid/widget/AbsListView;->mFastScroller:Landroid/widget/FastScroller;
@@ -13799,8 +13795,6 @@
     .end local p1
     invoke-virtual {p0, p1}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    invoke-static {p0}, Landroid/widget/AbsListView$Injector;->setChildSequenceStateTaggingListener(Landroid/widget/AbsListView;)V
-
     return-void
 .end method
 
@@ -16217,6 +16211,7 @@
 
     invoke-direct {v0, v11, v10}, Landroid/widget/AbsListView;->calcFirstPosition(ZI)V
 
+    .line 5033
     if-lez v10, :cond_e
 
     .line 5034
@@ -16258,7 +16253,6 @@
 
     if-eqz v29, :cond_10
 
-    .line 5047
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/AbsListView;->mFirstPosition:I
@@ -16844,8 +16838,6 @@
     .line 2627
     :cond_0
     :goto_0
-    invoke-static {p0, p1}, Landroid/widget/AbsListView$Injector;->drawBorder(Landroid/widget/AbsListView;Landroid/graphics/Canvas;)V
-
     return-void
 
     .line 2624

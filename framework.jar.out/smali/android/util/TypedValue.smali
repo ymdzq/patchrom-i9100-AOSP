@@ -128,6 +128,7 @@
 
     sput v0, Landroid/util/TypedValue;->miui_font_scale:F
 
+    .line 191
     new-array v0, v6, [F
 
     fill-array-data v0, :array_0

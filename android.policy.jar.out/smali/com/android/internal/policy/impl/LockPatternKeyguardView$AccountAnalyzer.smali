@@ -61,6 +61,8 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;->mAccounts:[Landroid/accounts/Account;
 
+    invoke-direct {p0, p2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;->checkAccounts(Landroid/accounts/AccountManager;)V
+
     .line 477
     return-void
 .end method
@@ -74,8 +76,6 @@
     .prologue
     .line 469
     invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;-><init>(Lcom/android/internal/policy/impl/LockPatternKeyguardView;Landroid/accounts/AccountManager;)V
-
-    invoke-direct {p0, p2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;->checkAccounts(Landroid/accounts/AccountManager;)V
 
     return-void
 .end method

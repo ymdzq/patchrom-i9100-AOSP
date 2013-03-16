@@ -197,6 +197,7 @@
     .end annotation
 
     .prologue
+    .line 187
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-virtual {p0}, Lcom/android/internal/widget/ScrollingTabContainerView;->getContext()Landroid/content/Context;

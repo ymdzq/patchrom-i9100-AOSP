@@ -222,7 +222,6 @@
 
     iput-object v3, p2, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 655
     :cond_0
     iget-object v3, p2, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
@@ -240,7 +239,6 @@
 
     return-void
 
-    .line 650
     :cond_1
     const/16 v3, 0x8
 

@@ -248,35 +248,28 @@
     :cond_miui_0
     invoke-super {p0, p1}, Landroid/widget/Button;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 231
     iget-object v0, p0, Landroid/widget/CompoundButton;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 232
     .local v0, buttonDrawable:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 233
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getGravity()I
 
     move-result v4
 
     and-int/lit8 v2, v4, 0x70
 
-    .line 234
     .local v2, verticalGravity:I
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
 
-    .line 236
     .local v1, height:I
     const/4 v3, 0x0
 
-    .line 238
     .local v3, y:I
     sparse-switch v2, :sswitch_data_0
 
-    .line 247
     :goto_0
     const/4 v4, 0x0
 

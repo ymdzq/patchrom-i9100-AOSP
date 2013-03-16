@@ -1365,12 +1365,6 @@
     .line 394
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    invoke-direct {p0, v1}, Landroid/widget/TimePicker;->changePositionState(Z)V
-
     invoke-virtual {p0}, Landroid/widget/TimePicker;->getCurrentHour()Ljava/lang/Integer;
 
     move-result-object v0
@@ -1582,6 +1576,12 @@
     move-result v1
 
     iput-boolean v1, p0, Landroid/widget/TimePicker;->mIs24HourView:Z
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Landroid/widget/TimePicker;->changePositionState(Z)V
 
     .line 427
     invoke-virtual {p0}, Landroid/widget/TimePicker;->getCurrentHour()Ljava/lang/Integer;

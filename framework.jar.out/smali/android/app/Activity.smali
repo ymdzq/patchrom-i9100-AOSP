@@ -3687,28 +3687,24 @@
     :goto_1
     invoke-virtual {v2, v0, v1}, Landroid/app/FragmentManagerImpl;->restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V
 
-    .line 886
     .end local v0           #p:Landroid/os/Parcelable;
     :cond_2
     iget-object v1, p0, Landroid/app/Activity;->mFragments:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v1}, Landroid/app/FragmentManagerImpl;->dispatchCreate()V
 
-    .line 887
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v1
 
     invoke-virtual {v1, p0, p1}, Landroid/app/Application;->dispatchActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
 
-    .line 888
     iput-boolean v3, p0, Landroid/app/Activity;->mCalled:Z
 
     invoke-static {p0}, Landroid/app/Activity$Injector;->setActivityGravity(Landroid/app/Activity;)V
 
     return-void
 
-    .line 878
     :cond_3
     iget-object v1, p0, Landroid/app/Activity;->mActionBar:Lcom/android/internal/app/ActionBarImpl;
 
@@ -5176,7 +5172,9 @@
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {p0, p1}, Landroid/app/Activity$Injector;->onOptionsItemSelected(Landroid/app/Activity;Landroid/view/MenuItem;)Z
+
+    move-result v0
 
     goto :goto_0
 .end method
@@ -5515,8 +5513,6 @@
 
     invoke-static {p0}, Landroid/app/Activity$Injector;->checkAccessControl(Landroid/app/Activity;)V
 
-    invoke-static {p0}, Landroid/app/Activity$Injector;->setActivityGravity(Landroid/app/Activity;)V
-
     return-void
 .end method
 
@@ -5768,9 +5764,7 @@
     return v0
 
     :cond_0
-    invoke-static {p0, p1}, Landroid/app/Activity$Injector;->onOptionsItemSelected(Landroid/app/Activity;Landroid/view/MenuItem;)Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -6034,6 +6028,8 @@
 
     .prologue
     const/4 v2, 0x0
+
+    invoke-static {p0}, Landroid/app/Activity$Injector;->onWindowHide(Landroid/app/Activity;)V
 
     .line 5104
     iget-object v0, p0, Landroid/app/Activity;->mFragments:Landroid/app/FragmentManagerImpl;
@@ -6496,6 +6492,8 @@
 
     .line 5101
     :cond_1
+    invoke-static {p0}, Landroid/app/Activity$Injector;->onWindowShow(Landroid/app/Activity;)V
+
     return-void
 .end method
 
@@ -6629,8 +6627,6 @@
     .end local v0           #i:I
     .end local v1           #lm:Landroid/app/LoaderManagerImpl;
     :cond_1
-    invoke-static {p0}, Landroid/app/Activity$Injector;->onWindowShow(Landroid/app/Activity;)V
-
     return-void
 .end method
 

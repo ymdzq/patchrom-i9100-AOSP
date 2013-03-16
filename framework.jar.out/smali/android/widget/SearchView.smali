@@ -1594,17 +1594,24 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1050
+    iget-object v3, p0, Landroid/widget/SearchView;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_miui_0
+
+    return-object p1
+    :cond_miui_0
     iget-boolean v3, p0, Landroid/widget/SearchView;->mIconifiedByDefault:Z
 
     if-nez v3, :cond_0
 
-    .line 1058
     .end local p1
     :goto_0
     return-object p1
 
-    .line 1052
     .restart local p1
     :cond_0
     new-instance v1, Landroid/text/SpannableStringBuilder;
@@ -3012,16 +3019,6 @@
     :goto_0
     if-nez v0, :cond_0
 
-    iget-object v3, p0, Landroid/widget/SearchView;->mContext:Landroid/content/Context;
-
-    invoke-static {v3}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_miui_0
-
-    return-object p1
-    :cond_miui_0
     iget-boolean v3, p0, Landroid/widget/SearchView;->mIconifiedByDefault:Z
 
     if-eqz v3, :cond_2
@@ -3106,7 +3103,6 @@
 
     move-result v0
 
-    .line 819
     .local v0, focused:Z
     iget-object v1, p0, Landroid/widget/SearchView;->mSearchPlate:Landroid/view/View;
 
@@ -3413,11 +3409,9 @@
 
     if-nez v1, :cond_1
 
-    .line 799
     :cond_0
     const/4 v0, 0x0
 
-    .line 801
     :cond_1
     iget-object v1, p0, Landroid/widget/SearchView;->mSubmitArea:Landroid/view/View;
 

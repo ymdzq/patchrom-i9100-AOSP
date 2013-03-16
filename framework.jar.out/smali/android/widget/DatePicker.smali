@@ -143,13 +143,13 @@
 
     iput-object v13, v0, Landroid/widget/DatePicker;->mDateFormat:Ljava/text/DateFormat;
 
-    .line 121
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Landroid/widget/DatePicker;->mIsEnabled:Z
 
+    .line 154
     sget-object v13, Lcom/android/internal/R$styleable;->DatePicker:[I
 
     const/4 v14, 0x0
@@ -230,7 +230,6 @@
 
     move-result v7
 
-    .line 167
     .local v7, layoutResourceId:I
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 

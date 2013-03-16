@@ -193,7 +193,6 @@
 
     if-nez v3, :cond_1
 
-    .line 178
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarContextView;->getContext()Landroid/content/Context;
 
     move-result-object v3

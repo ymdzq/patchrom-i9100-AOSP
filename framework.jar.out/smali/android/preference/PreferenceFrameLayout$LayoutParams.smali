@@ -74,6 +74,7 @@
 
     iput-boolean v1, p0, Landroid/preference/PreferenceFrameLayout$LayoutParams;->removeBorders:Z
 
+    .line 139
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 140

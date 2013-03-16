@@ -1586,13 +1586,11 @@
 
     invoke-direct {v2, v4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 964
     .local v2, listParams:Landroid/widget/FrameLayout$LayoutParams;
     iget-object v4, p0, Landroid/widget/PopupWindow;->mContentView:Landroid/view/View;
 
     invoke-virtual {v3, v4, v2}, Landroid/widget/PopupWindow$PopupViewContainer;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 967
     iput-object v3, p0, Landroid/widget/PopupWindow;->mPopupView:Landroid/view/View;
 
     iget-object v0, p0, Landroid/widget/PopupWindow;->mPopupView:Landroid/view/View;

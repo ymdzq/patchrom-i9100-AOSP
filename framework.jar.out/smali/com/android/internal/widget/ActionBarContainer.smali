@@ -188,7 +188,7 @@
 .end method
 
 
-.method getActionBarView()Lcom/android/internal/widget/ActionBarView;
+.method public getActionBarView()Lcom/android/internal/widget/ActionBarView;
     .locals 1
     .annotation build Landroid/annotation/MiuiHook;
         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
@@ -204,6 +204,7 @@
     .locals 1
 
     .prologue
+    .line 144
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContainer;->mTabContainer:Landroid/view/View;
 
     return-object v0
@@ -216,7 +217,6 @@
     .end annotation
 
     .prologue
-    .line 144
     iget-boolean v0, p0, Lcom/android/internal/widget/ActionBarContainer;->mIsSplit:Z
 
     return v0

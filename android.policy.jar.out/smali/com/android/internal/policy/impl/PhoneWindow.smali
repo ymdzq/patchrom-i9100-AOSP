@@ -1248,42 +1248,35 @@
 
     if-nez v6, :cond_5
 
-    .line 2869
     iget-object v6, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mActionBar:Lcom/android/internal/widget/ActionBarView;
 
     iget-object v8, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v6, v8}, Lcom/android/internal/widget/ActionBarView;->setWindowTitle(Ljava/lang/CharSequence;)V
 
-    .line 2871
     :cond_5
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getLocalFeatures()I
 
     move-result v1
 
-    .line 2872
     .local v1, localFeatures:I
     and-int/lit8 v6, v1, 0x4
 
     if-eqz v6, :cond_6
 
-    .line 2873
     iget-object v6, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mActionBar:Lcom/android/internal/widget/ActionBarView;
 
     invoke-virtual {v6}, Lcom/android/internal/widget/ActionBarView;->initProgress()V
 
-    .line 2875
     :cond_6
     and-int/lit8 v6, v1, 0x20
 
     if-eqz v6, :cond_7
 
-    .line 2876
     iget-object v6, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mActionBar:Lcom/android/internal/widget/ActionBarView;
 
     invoke-virtual {v6}, Lcom/android/internal/widget/ActionBarView;->initIndeterminateProgress()V
 
-    .line 2879
     :cond_7
     iget-object v6, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mActionBar:Lcom/android/internal/widget/ActionBarView;
 
@@ -1291,7 +1284,6 @@
 
     const/4 v2, 0x0
 
-    .line 2880
     .local v2, splitActionBar:Z
     iget v6, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mUiOptions:I
 
@@ -3427,7 +3419,6 @@
 
     if-eqz v19, :cond_19
 
-    .line 2594
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
 
     move-result-object v19
@@ -4646,14 +4637,12 @@
 
     if-eqz v19, :cond_27
 
-    .line 2765
     and-int/lit16 v0, v7, 0x200
 
     move/from16 v19, v0
 
     if-eqz v19, :cond_26
 
-    .line 2766
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
 
     move-result-object v19
@@ -4665,10 +4654,8 @@
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
 
-    .line 2768
     .end local v10           #layoutResource:I
     :cond_26
-    const v10, 0x1090097
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
 
     move-result-object v19
@@ -4676,6 +4663,7 @@
     invoke-static/range {v19 .. v19}, Lcom/android/internal/policy/impl/PhoneWindow$Injector;->getActionBarResourceId(Landroid/content/Context;)I
 
     move-result v10
+
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
 

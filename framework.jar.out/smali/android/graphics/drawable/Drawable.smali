@@ -58,10 +58,6 @@
 
     sput-object v0, Landroid/graphics/drawable/Drawable;->ZERO_BOUNDS_RECT:Landroid/graphics/Rect;
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Landroid/graphics/drawable/Drawable;->mId:I
-
     return-void
 .end method
 
@@ -71,36 +67,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     sget-object v0, Landroid/util/StateSet;->WILD_CARD:[I
 
     iput-object v0, p0, Landroid/graphics/drawable/Drawable;->mStateSet:[I
 
-    .line 121
     iput v1, p0, Landroid/graphics/drawable/Drawable;->mLevel:I
 
-    .line 122
     iput v1, p0, Landroid/graphics/drawable/Drawable;->mChangingConfigurations:I
 
-    .line 123
     sget-object v0, Landroid/graphics/drawable/Drawable;->ZERO_BOUNDS_RECT:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/graphics/drawable/Drawable;->mBounds:Landroid/graphics/Rect;
 
-    .line 124
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/drawable/Drawable;->mCallback:Ljava/lang/ref/WeakReference;
 
-    .line 125
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/drawable/Drawable;->mVisible:Z
 
-    .line 940
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroid/graphics/drawable/Drawable;->mId:I
+
     return-void
 .end method
 
