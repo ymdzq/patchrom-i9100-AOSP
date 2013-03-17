@@ -1,0 +1,36 @@
+From b68d03f1abd716a7e5a462106f8f5454479e0a05 Mon Sep 17 00:00:00 2001
+From: yumingyang <yumingyang@xiaomi.com>
+Date: Wed, 13 Mar 2013 19:25:46 +0800
+Subject: [PATCH 02/10] Fix the defect that new installed app's auto-start
+ setting error when restart phone.
+
+N/A
+
+Change-Id: Ia2ce7eb915fa98901052bd75958050bc91ddeec9
+Ref-Id: I34ec4cfd01ba2184b89f8b71ea9de366eaa1c570
+
+Signed-off-by: santajin <zj1860263@163.com>
+---
+ .../android/server/pm/PackageManagerService.smali  |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali b/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali
+index ab47725..36d6662 100644
+--- a/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali
++++ b/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali
+@@ -9178,6 +9178,12 @@
+     goto :goto_0
+ 
+     :cond_4
++    iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
++
++    iget-object v1, p0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
++
++    invoke-static {v0, v1}, Lcom/android/server/pm/ExtraPackageManagerServices;->postProcessNewInstall(Landroid/content/pm/ApplicationInfo;Lcom/android/server/pm/Settings;)V
++
+     invoke-direct {p0, v7, p4, p5}, Lcom/android/server/pm/PackageManagerService;->updateSettingsLI(Landroid/content/pm/PackageParser$Package;Ljava/lang/String;Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;)V
+ 
+     iget v0, p5, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnCode:I
+-- 
+1.7.9.5
+

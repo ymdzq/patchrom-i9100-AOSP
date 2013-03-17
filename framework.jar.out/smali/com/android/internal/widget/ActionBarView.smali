@@ -67,6 +67,12 @@
 
 .field private mMaxHomeSlop:I
 
+.field mMenuPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private final mNavItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
 .field private mNavigationMode:I
@@ -97,7 +103,11 @@
 
 .field private mTitle:Ljava/lang/CharSequence;
 
-.field private mTitleLayout:Landroid/widget/LinearLayout;
+.field private mTitleLayout:Landroid/view/ViewGroup;
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
 
 .field private mTitleStyleRes:I
 
@@ -857,13 +867,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/internal/widget/ActionBarView;)Landroid/widget/LinearLayout;
+.method static synthetic access$800(Lcom/android/internal/widget/ActionBarView;)Landroid/view/ViewGroup;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     return-object v0
 .end method
@@ -943,12 +952,19 @@
 
     const/4 v6, 0x0
 
-    .line 761
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->miuiInitTitle()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_miui_0
+
+    return-void
+
+    :cond_miui_0
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-nez v4, :cond_4
 
-    .line 762
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -967,14 +983,13 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
-    .line 765
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     const v8, 0x1020242
 
-    invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -982,12 +997,11 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleView:Landroid/widget/TextView;
 
-    .line 766
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     const v8, 0x1020243
 
-    invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -995,30 +1009,26 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mSubtitleView:Landroid/widget/TextView;
 
-    .line 767
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     const v8, 0x102023b
 
-    invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleUpView:Landroid/view/View;
 
-    .line 769
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     iget-object v8, p0, Lcom/android/internal/widget/ActionBarView;->mUpClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, v8}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 771
     iget v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleStyleRes:I
 
     if-eqz v4, :cond_0
 
-    .line 772
     iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleView:Landroid/widget/TextView;
 
     iget-object v8, p0, Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
@@ -1115,8 +1125,7 @@
     :goto_3
     invoke-virtual {v8, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 790
-    iget-object v8, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v8, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_c
 
@@ -1125,17 +1134,16 @@
     move v4, v5
 
     :goto_4
-    invoke-virtual {v8, v4}, Landroid/widget/LinearLayout;->setEnabled(Z)V
+    invoke-virtual {v8, v4}, Landroid/view/ViewGroup;->setEnabled(Z)V
 
-    .line 791
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_d
 
     if-eqz v3, :cond_d
 
     :goto_5
-    invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->setClickable(Z)V
+    invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->setClickable(Z)V
 
     .line 794
     .end local v0           #homeAsUp:Z
@@ -1143,7 +1151,7 @@
     .end local v2           #showHome:Z
     .end local v3           #showTitleUp:Z
     :cond_4
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ActionBarView;->addView(Landroid/view/View;)V
 
@@ -1168,13 +1176,11 @@
 
     if-eqz v4, :cond_6
 
-    .line 798
     :cond_5
-    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
-    invoke-virtual {v4, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 800
     :cond_6
     return-void
 
@@ -1277,12 +1283,12 @@
     .line 529
     .local v0, visible:Z
     :goto_0
-    iget-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_4
 
     :goto_1
-    invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 531
     .end local v0           #visible:Z
@@ -1442,6 +1448,18 @@
     return v0
 .end method
 
+.method public getExpandedActionView()Landroid/view/View;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mExpandedActionView:Landroid/view/View;
+
+    return-object v0
+.end method
+
 .method public getNavigationMode()I
     .locals 1
 
@@ -1462,12 +1480,96 @@
     return-object v0
 .end method
 
+.method public getSubtitleStyleRes()I
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ActionBarView;->mSubtitleStyleRes:I
+
+    return v0
+.end method
+
+.method public getSubtitleView()Landroid/widget/TextView;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mSubtitleView:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method public getTabScrollView()Lcom/android/internal/widget/ScrollingTabContainerView;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mTabScrollView:Lcom/android/internal/widget/ScrollingTabContainerView;
+
+    return-object v0
+.end method
+
 .method public getTitle()Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
     .line 496
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mTitle:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public getTitleLayout()Landroid/view/ViewGroup;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
+
+    return-object v0
+.end method
+
+.method public getTitleStyleRes()I
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ActionBarView;->mTitleStyleRes:I
+
+    return v0
+.end method
+
+.method public getTitleView()Landroid/widget/TextView;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mTitleView:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method public getUpClickListener()Landroid/view/View$OnClickListener;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mUpClickListener:Landroid/view/View$OnClickListener;
 
     return-object v0
 .end method
@@ -1619,6 +1721,22 @@
     return v0
 .end method
 
+.method protected miuiInitTitle()Z
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 3
     .parameter "newConfig"
@@ -1626,51 +1744,41 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 266
     invoke-super {p0, p1}, Lcom/android/internal/widget/AbsActionBarView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 268
     iput-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mTitleView:Landroid/widget/TextView;
 
-    .line 269
     iput-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mSubtitleView:Landroid/widget/TextView;
 
-    .line 270
     iput-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mTitleUpView:Landroid/view/View;
 
-    .line 271
-    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     if-ne v1, p0, :cond_0
 
-    .line 272
-    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v1}, Lcom/android/internal/widget/ActionBarView;->removeView(Landroid/view/View;)V
 
-    .line 274
     :cond_0
-    iput-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iput-object v2, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
-    .line 275
     iget v1, p0, Lcom/android/internal/widget/ActionBarView;->mDisplayOptions:I
 
     and-int/lit8 v1, v1, 0x8
 
     if-eqz v1, :cond_1
 
-    .line 276
     invoke-direct {p0}, Lcom/android/internal/widget/ActionBarView;->initTitle()V
 
-    .line 279
     :cond_1
     iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTabScrollView:Lcom/android/internal/widget/ScrollingTabContainerView;
 
@@ -1946,7 +2054,7 @@
     .line 1034
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v30, v0
 
@@ -1954,11 +2062,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Landroid/widget/LinearLayout;->getVisibility()I
+    invoke-virtual/range {v30 .. v30}, Landroid/view/ViewGroup;->getVisibility()I
 
     move-result v30
 
@@ -1990,7 +2098,7 @@
     .line 1037
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v30, v0
 
@@ -3472,7 +3580,7 @@
     :cond_9
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v40, v0
 
@@ -3480,11 +3588,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v40, v0
 
-    invoke-virtual/range {v40 .. v40}, Landroid/widget/LinearLayout;->getVisibility()I
+    invoke-virtual/range {v40 .. v40}, Landroid/view/ViewGroup;->getVisibility()I
 
     move-result v40
 
@@ -3812,7 +3920,7 @@
     .line 981
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v40, v0
 
@@ -3847,11 +3955,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     move-object/from16 v41, v0
 
-    invoke-virtual/range {v41 .. v41}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
+    invoke-virtual/range {v41 .. v41}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v41
 
@@ -4538,6 +4646,52 @@
     return-object v0
 .end method
 
+.method public onWindowHide()V
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mSplitView:Lcom/android/internal/widget/ActionBarContainer;
+
+    instance-of v0, v0, Lcom/miui/internal/v5/widget/ActionBarContainer;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mSplitView:Lcom/android/internal/widget/ActionBarContainer;
+
+    check-cast v0, Lcom/miui/internal/v5/widget/ActionBarContainer;
+
+    invoke-virtual {v0}, Lcom/miui/internal/v5/widget/ActionBarContainer;->onWindowHide()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onWindowShow()V
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mSplitView:Lcom/android/internal/widget/ActionBarContainer;
+
+    instance-of v0, v0, Lcom/miui/internal/v5/widget/ActionBarContainer;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mSplitView:Lcom/android/internal/widget/ActionBarContainer;
+
+    check-cast v0, Lcom/miui/internal/v5/widget/ActionBarContainer;
+
+    invoke-virtual {v0}, Lcom/miui/internal/v5/widget/ActionBarContainer;->onWindowShow()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setCallback(Landroid/app/ActionBar$OnNavigationListener;)V
     .locals 0
     .parameter "callback"
@@ -4559,6 +4713,19 @@
     iput-boolean p1, p0, Lcom/android/internal/widget/ActionBarView;->mIsCollapsable:Z
 
     .line 808
+    return-void
+.end method
+
+.method protected setCollapsed(Z)V
+    .locals 0
+    .parameter "collapsed"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/internal/widget/ActionBarView;->mIsCollapsed:Z
+
     return-void
 .end method
 
@@ -4756,7 +4923,7 @@
     .line 602
     :cond_2
     :goto_6
-    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-eqz v9, :cond_4
 
@@ -4778,6 +4945,10 @@
     :goto_7
     iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleUpView:Landroid/view/View;
 
+    if-eqz v9, :cond_miui_0
+
+    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleUpView:Landroid/view/View;
+
     if-nez v4, :cond_3
 
     if-eqz v1, :cond_e
@@ -4788,8 +4959,8 @@
     :goto_8
     invoke-virtual {v9, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 606
-    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    :cond_miui_0
+    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-nez v4, :cond_f
 
@@ -4798,17 +4969,16 @@
     move v7, v8
 
     :goto_9
-    invoke-virtual {v9, v7}, Landroid/widget/LinearLayout;->setEnabled(Z)V
+    invoke-virtual {v9, v7}, Landroid/view/ViewGroup;->setEnabled(Z)V
 
-    .line 607
-    iget-object v7, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v7, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-nez v4, :cond_10
 
     if-eqz v1, :cond_10
 
     :goto_a
-    invoke-virtual {v7, v8}, Landroid/widget/LinearLayout;->setClickable(Z)V
+    invoke-virtual {v7, v8}, Landroid/view/ViewGroup;->setClickable(Z)V
 
     .line 610
     .end local v1           #homeAsUp:Z
@@ -4905,7 +5075,7 @@
     .line 598
     .end local v2           #logoVis:Z
     :cond_c
-    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v9}, Lcom/android/internal/widget/ActionBarView;->removeView(Landroid/view/View;)V
 
@@ -5380,28 +5550,24 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    .line 408
     .local v3, oldParent:Landroid/view/ViewGroup;
     if-eqz v3, :cond_2
 
-    .line 409
     iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mMenuView:Lcom/android/internal/view/menu/ActionMenuView;
 
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 412
     .end local v3           #oldParent:Landroid/view/ViewGroup;
     :cond_2
     iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mActionMenuPresenter:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
     if-nez v4, :cond_3
 
-    .line 413
-    new-instance v4, Lcom/android/internal/view/menu/ActionMenuPresenter;
+    iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
 
-    iget-object v5, p0, Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/internal/widget/ActionBarView$Injector;->createActionMenuPresenter(Landroid/content/Context;)Lcom/android/internal/view/menu/ActionMenuPresenter;
 
-    invoke-direct {v4, v5}, Lcom/android/internal/view/menu/ActionMenuPresenter;-><init>(Landroid/content/Context;)V
+    move-result-object v4
 
     iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mActionMenuPresenter:Lcom/android/internal/view/menu/ActionMenuPresenter;
 
@@ -6025,12 +6191,12 @@
     .line 548
     .local v0, visible:Z
     :goto_1
-    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_4
 
     :goto_2
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 550
     .end local v0           #visible:Z
@@ -6057,6 +6223,19 @@
     goto :goto_2
 .end method
 
+.method public setSubtitleView(Landroid/widget/TextView;)V
+    .locals 0
+    .parameter "subTitleView"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarView;->mSubtitleView:Landroid/widget/TextView;
+
+    return-void
+.end method
+
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
     .parameter "title"
@@ -6071,6 +6250,32 @@
     invoke-direct {p0, p1}, Lcom/android/internal/widget/ActionBarView;->setTitleImpl(Ljava/lang/CharSequence;)V
 
     .line 508
+    return-void
+.end method
+
+.method public setTitleLayout(Landroid/view/ViewGroup;)V
+    .locals 0
+    .parameter "titleLayout"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
+
+    return-void
+.end method
+
+.method public setTitleView(Landroid/widget/TextView;)V
+    .locals 0
+    .parameter "titleView"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarView;->mTitleView:Landroid/widget/TextView;
+
     return-void
 .end method
 
@@ -6112,21 +6317,4 @@
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public setHomeViewBackground(I)V
-    .locals 1
-    .parameter "resId"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-
-    .prologue
-    .line 695
-    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mHomeLayout:Lcom/android/internal/widget/ActionBarView$HomeView;
-
-    invoke-virtual {v0, p1}, Lcom/android/internal/widget/ActionBarView$HomeView;->setBackgroundResource(I)V
-
-    .line 696
-    return-void
 .end method

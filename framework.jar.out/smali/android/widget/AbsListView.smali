@@ -124,6 +124,12 @@
 
 .field mAdapterHasStableIds:Z
 
+.field mBottomLineDrawable:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private mCacheColorHint:I
 
 .field mCachingActive:Z
@@ -1252,6 +1258,27 @@
     return-object v0
 .end method
 
+.method private calcFirstPosition(ZI)V
+    .locals 1
+    .parameter "down"
+    .parameter "count"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Landroid/widget/AbsListView;->mFirstPosition:I
+
+    add-int/2addr v0, p2
+
+    iput v0, p0, Landroid/widget/AbsListView;->mFirstPosition:I
+
+    :cond_0
+    return-void
+.end method
+
 .method private clearScrollingCache()V
     .locals 1
 
@@ -1962,6 +1989,8 @@
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
     iput v1, p0, Landroid/widget/AbsListView;->mDensityScale:F
+
+    invoke-static {p0}, Landroid/widget/AbsListView$Injector;->setChildSequenceStateTaggingListener(Landroid/widget/AbsListView;)V
 
     .line 819
     return-void
@@ -4816,40 +4845,34 @@
 
     if-eqz v8, :cond_4
 
-    .line 3804
     iget v6, p0, Landroid/widget/AbsListView;->mScrollY:I
 
-    .line 3805
     .restart local v6       #scrollY:I
     if-eqz v6, :cond_5
 
-    .line 3807
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v4
 
-    .line 3808
     .restart local v4       #restoreCount:I
     int-to-float v8, v6
 
     invoke-virtual {p1, v10, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 3809
     iget-object v8, p0, Landroid/widget/AbsListView;->mFastScroller:Landroid/widget/FastScroller;
 
     invoke-virtual {v8, p1}, Landroid/widget/FastScroller;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3810
     invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 3815
     .end local v4           #restoreCount:I
     .end local v6           #scrollY:I
     :cond_4
     :goto_0
+    invoke-static {p0, p1}, Landroid/widget/AbsListView$Injector;->drawBorder(Landroid/widget/AbsListView;Landroid/graphics/Canvas;)V
+
     return-void
 
-    .line 3812
     .restart local v6       #scrollY:I
     :cond_5
     iget-object v8, p0, Landroid/widget/AbsListView;->mFastScroller:Landroid/widget/FastScroller;
@@ -9410,13 +9433,17 @@
 
     move-result v26
 
-    if-eqz v26, :cond_ff
+    if-eqz v26, :cond_miui_0
 
-    const/16 v26, 0x1
+    const/16 v26, 0x3
 
-    return v26
+    move-object/from16 v0, p1
 
-    :cond_ff
+    move/from16 v1, v26
+
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
+
+    :cond_miui_0
     invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView;->isEnabled()Z
 
     move-result v26
@@ -16180,6 +16207,10 @@
 
     iput-boolean v0, v1, Landroid/widget/AbsListView;->mBlockLayoutRequests:Z
 
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v11, v10}, Landroid/widget/AbsListView;->calcFirstPosition(ZI)V
+
     .line 5033
     if-lez v10, :cond_e
 
@@ -16218,10 +16249,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->offsetChildrenTopAndBottom(I)V
 
-    .line 5046
-    if-eqz v11, :cond_10
+    sget-boolean v29, Landroid/widget/AbsListView$Injector;->FALSE:Z
 
-    .line 5047
+    if-eqz v29, :cond_10
+
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/AbsListView;->mFirstPosition:I

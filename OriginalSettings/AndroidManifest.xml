@@ -2,7 +2,7 @@
 <manifest android:sharedUserId="android.uid.system" android:versionCode="16" android:versionName="4.1.2-eng.faryaab.20121017.131954" package="com.android.OriginalSettings" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
-    <original-package android:name="com.android.OriginalSettings" />
+    <original-package android:name="com.android.settings" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
@@ -53,7 +53,7 @@
     <uses-permission android:name="android.permission.MANAGE_USB" />
     <uses-permission android:name="android.permission.SET_POINTER_SPEED" />
     <uses-permission android:name="android.permission.SET_KEYBOARD_LAYOUT" />
-    <application android:theme="@miui:style/Theme.Light" android:label="@string/settings_label" android:icon="@mipmap/ic_launcher_settings" android:taskAffinity="" android:hardwareAccelerated="true" android:uiOptions="splitActionBarWhenNarrow">
+    <application android:theme="@miui:style/V5.Theme" android:label="@string/settings_label" android:icon="@mipmap/ic_launcher_settings" android:taskAffinity="" android:hardwareAccelerated="true" android:uiOptions="splitActionBarWhenNarrow">
         <activity android:label="@string/settings_label_launcher" android:name="Settings" android:taskAffinity="com.android.OriginalSettings" android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

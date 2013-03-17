@@ -686,6 +686,12 @@
 
 .field mAccessibilityViewId:I
 
+.field mAdditionalState:I
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private mAnimator:Landroid/view/ViewPropertyAnimator;
 
 .field mAttachInfo:Landroid/view/View$AttachInfo;
@@ -1840,6 +1846,8 @@
     :goto_0
     iput-object v0, p0, Landroid/view/View;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
+    iput v2, p0, Landroid/view/View;->mAdditionalState:I
+
     .line 3699
     iput-object v1, p0, Landroid/view/View;->mResources:Landroid/content/res/Resources;
 
@@ -1939,6 +1947,8 @@
 
     :goto_0
     iput-object v0, p0, Landroid/view/View;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
+
+    iput v3, p0, Landroid/view/View;->mAdditionalState:I
 
     .line 3227
     iput-object p1, p0, Landroid/view/View;->mContext:Landroid/content/Context;
@@ -3626,14 +3636,19 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScrollContainer(Z)V
 
-    .line 3688
     :cond_b
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->computeOpaqueFlags()V
 
-    .line 3689
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    move/from16 v2, p3
+
+    invoke-static {v0, v1, v2}, Landroid/view/View$Injector;->initializeChildrenSequenceStates(Landroid/view/View;Landroid/util/AttributeSet;I)V
+
     return-void
 
-    .line 3656
     .restart local v9       #bottomPadding:I
     .restart local v16       #leftPadding:I
     .restart local v19       #rightPadding:I
@@ -14802,14 +14817,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 13998
     invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 14000
+    invoke-static {p0, v0}, Landroid/view/View$Injector;->onDrawableStateChanged(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+
     :cond_0
     return-void
 .end method
@@ -14854,6 +14869,31 @@
     .line 8690
     :cond_0
     return-void
+.end method
+
+.method fillAdditionalState([I)[I
+    .locals 2
+    .parameter "states"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    move-object v0, p1
+
+    .local v0, newStates:[I
+    iget v1, p0, Landroid/view/View;->mAdditionalState:I
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Landroid/view/View;->mAdditionalState:I
+
+    invoke-static {v0, v1}, Lmiui/util/UiUtils;->getViewStates([II)[I
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method public findFocus()Landroid/view/View;
@@ -22983,27 +23023,26 @@
 
     or-int/lit16 v4, v4, 0x200
 
-    .line 14085
     :cond_b
     sget-object v5, Landroid/view/View;->VIEW_STATE_SETS:[[I
 
     aget-object v0, v5, v4
 
-    .line 14099
     .local v0, drawableState:[I
+    invoke-virtual {p0, v0}, Landroid/view/View;->fillAdditionalState([I)[I
+
+    move-result-object v0
+
     if-eqz p1, :cond_0
 
-    .line 14104
     if-eqz v0, :cond_c
 
-    .line 14105
     array-length v5, v0
 
     add-int/2addr v5, p1
 
     new-array v1, v5, [I
 
-    .line 14106
     .local v1, fullState:[I
     array-length v5, v0
 
@@ -28603,6 +28642,30 @@
 
     .line 14568
     goto :goto_1
+.end method
+
+.method public setAdditionalState(I)V
+    .locals 1
+    .parameter "state"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget v0, p0, Landroid/view/View;->mAdditionalState:I
+
+    if-eq p1, v0, :cond_0
+
+    iput p1, p0, Landroid/view/View;->mAdditionalState:I
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
+
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
+
+    :cond_0
+    return-void
 .end method
 
 .method public setAlpha(F)V

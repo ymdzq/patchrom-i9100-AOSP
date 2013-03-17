@@ -48,6 +48,8 @@
 
 .field static final TRANSACTION_setImeWindowStatus:I = 0xb
 
+.field static final TRANSACTION_setStatus:I = 0x10
+
 .field static final TRANSACTION_setSystemUiVisibility:I = 0x9
 
 .field static final TRANSACTION_toggleRecentApps:I = 0xd
@@ -501,51 +503,84 @@
     :cond_4
     move v0, v4
 
-    .line 161
     goto :goto_5
 
     .restart local v0       #_arg0:Z
     :cond_5
     move v1, v4
 
-    .line 163
     goto :goto_6
 
-    .line 169
     .end local v0           #_arg0:Z
     :sswitch_d
     const-string v4, "com.android.internal.statusbar.IStatusBar"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 170
     invoke-virtual {p0}, Lcom/android/internal/statusbar/IStatusBar$Stub;->toggleRecentApps()V
 
     goto/16 :goto_0
 
-    .line 175
     :sswitch_e
     const-string v4, "com.android.internal.statusbar.IStatusBar"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 176
     invoke-virtual {p0}, Lcom/android/internal/statusbar/IStatusBar$Stub;->preloadRecentApps()V
 
     goto/16 :goto_0
 
-    .line 181
     :sswitch_f
     const-string v4, "com.android.internal.statusbar.IStatusBar"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 182
     invoke-virtual {p0}, Lcom/android/internal/statusbar/IStatusBar$Stub;->cancelPreloadRecentApps()V
 
     goto/16 :goto_0
 
-    .line 39
+    :sswitch_10
+    const-string v4, "com.android.internal.statusbar.IStatusBar"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .local v0, _arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .local v1, _arg1:Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    sget-object v4, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/Bundle;
+
+    .local v2, _arg2:Landroid/os/Bundle;
+    :goto_7
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/internal/statusbar/IStatusBar$Stub;->setStatus(ILjava/lang/String;Landroid/os/Bundle;)V
+
+    goto/16 :goto_0
+
+    .end local v2           #_arg2:Landroid/os/Bundle;
+    :cond_6
+    const/4 v2, 0x0
+
+    .restart local v2       #_arg2:Landroid/os/Bundle;
+    goto :goto_7
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -563,6 +598,7 @@
         0xd -> :sswitch_d
         0xe -> :sswitch_e
         0xf -> :sswitch_f
+        0x10 -> :sswitch_10
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

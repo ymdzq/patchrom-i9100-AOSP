@@ -17353,6 +17353,10 @@
     :cond_2
     iput-boolean v5, p0, Lcom/android/server/wm/WindowManagerService;->mSafeMode:Z
 
+    const/4 v6, 0x0
+
+    iput-boolean v6, p0, Lcom/android/server/wm/WindowManagerService;->mSafeMode:Z
+
     .line 6789
     :try_start_0
     const-string v5, "persist.sys.safemode"

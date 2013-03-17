@@ -1,0 +1,109 @@
+From 680bbe9739cae91021f6f8c408385b57d76a27df Mon Sep 17 00:00:00 2001
+From: mochangming <mochangming@xiaomi.com>
+Date: Thu, 14 Mar 2013 16:49:57 +0800
+Subject: [PATCH 07/10] adjust some hooks
+
+Change-Id: I1fb6dc0729a31cf48cb9ac557364d2169b2da276
+
+Signed-off-by: santajin <zj1860263@163.com>
+---
+ .../android/internal/policy/impl/PhoneWindow.smali |   29 ++++++++++----------
+ .../android/server/pm/PackageManagerService.smali  |    4 +--
+ 2 files changed, 16 insertions(+), 17 deletions(-)
+
+diff --git a/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindow.smali b/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindow.smali
+index de09613..b57fa1b 100644
+--- a/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindow.smali
++++ b/android.policy.jar.out/smali/com/android/internal/policy/impl/PhoneWindow.smali
+@@ -1685,7 +1685,7 @@
+ 
+     iget-boolean v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->isCompact:Z
+ 
+-    if-eqz v4, :cond_miui_1
++    if-eqz v4, :cond_f
+ 
+     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getOptionsPanelGravity()I
+ 
+@@ -1775,7 +1775,7 @@
+ 
+     iget-object v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->createdPanelView:Landroid/view/View;
+ 
+-    if-eqz v4, :cond_a
++    if-eqz v4, :cond_miui_0
+ 
+     move-object/from16 v0, p1
+ 
+@@ -1802,6 +1802,15 @@
+     :cond_f
+     move-object/from16 v0, p1
+ 
++    iget v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->gravity:I
++
++    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
++
++    goto :goto_6
++
++    :cond_miui_0
++    move-object/from16 v0, p1
++
+     iget-object v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->decorView:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
+ 
+     invoke-virtual {v4}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+@@ -1809,11 +1818,11 @@
+     move-result-object v2
+ 
+     .restart local v2       #lp:Landroid/view/ViewGroup$LayoutParams;
+-    if-eqz v2, :cond_miui_0
++    if-eqz v2, :cond_miui_1
+ 
+     iget v3, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+ 
+-    :cond_miui_0
++    :cond_miui_1
+     move-object/from16 v0, p1
+ 
+     iget-object v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->decorView:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
+@@ -1824,17 +1833,7 @@
+ 
+     if-nez v4, :cond_a
+ 
+-    goto/16 :goto_0
+-
+-    .local v2, lp:Landroid/view/WindowManager$LayoutParams;
+-    :cond_miui_1
+-    move-object/from16 v0, p1
+-
+-    iget v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->gravity:I
+-
+-    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
+-
+-    goto :goto_6
++    goto :goto_0
+ .end method
+ 
+ .method private openPanelsAfterRestore()V
+diff --git a/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali b/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali
+index 985cb85..f4bb4d7 100644
+--- a/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali
++++ b/services.jar.out/smali/com/android/server/pm/PackageManagerService.smali
+@@ -5039,7 +5039,7 @@
+     goto :goto_0
+ .end method
+ 
+-.method private dealFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
++.method private appendExtendedFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
+     .locals 4
+     .parameter "pkg"
+     .parameter "pkgSetting"
+@@ -14757,7 +14757,7 @@
+ 
+     move-object/from16 v2, v41
+ 
+-    invoke-direct {v0, v1, v2}, Lcom/android/server/pm/PackageManagerService;->dealFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
++    invoke-direct {v0, v1, v2}, Lcom/android/server/pm/PackageManagerService;->appendExtendedFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
+ 
+     move-object/from16 v0, v41
+ 
+-- 
+1.7.9.5
+
