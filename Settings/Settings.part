@@ -1,5 +1,5 @@
---- MiuiDeviceInfoSettings.smali	2013-03-15 20:44:38.000000000 +0800
-+++ MiuiDeviceInfoSettings1.smali	2013-03-16 00:46:35.000000000 +0800
+--- a/Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali	2013-03-15 20:44:38.000000000 +0800
++++ b/Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali	2013-03-16 00:46:35.000000000 +0800
 @@ -253,7 +253,7 @@
      .local v1, availableSize:J
      sget-boolean v11, Lmiui/os/Build;->IS_XIAOMI:Z
