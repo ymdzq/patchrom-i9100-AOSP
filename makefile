@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider Stk
 #local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
-local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager FileExplorer Backup MiuiGallery Music DeskClock
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager FileExplorer Backup MiuiGallery Music DeskClock SoundRecorder
 
 include phoneapps.mk
 
@@ -45,6 +45,7 @@ local-pre-zip-misc:
 #	cp other/Cusettings.apk $(ZIP_DIR)/system/app/Cusettings.apk
 #	@echo Add USB_switcher
 	cp other/GalaxyS2Settings.apk $(ZIP_DIR)/system/app/GalaxyS2Settings.apk
+	cp other/system_lib/* $(ZIP_DIR)/system/lib/
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

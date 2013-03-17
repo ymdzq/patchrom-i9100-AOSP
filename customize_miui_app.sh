@@ -20,6 +20,7 @@ if [ $1 = "Settings" ];then
 	echo "Fatal error: Settings patch fail"
         exit 1
     done
+
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
@@ -37,6 +38,16 @@ if [ $1 = "ThemeManager" ];then
 fi
 
 if [ $1 = "MiuiHome" ];then
+    cp $1/*.part out/
+    cd out
+    $GIT_APPLY MiuiHome.part
+    cd ..
+    for file in `find $2 -name *.rej`
+    do
+	echo "Fatal error: MiuiHome patch fail"
+        exit 1
+    done
+
     cp ../miui/src/packages/apps/MiuiHome/res/drawable-hdpi/* $2/res/drawable-hdpi/
 fi
 
@@ -64,4 +75,10 @@ if [ $1 = "DeskClock" ];then
 	mkdir -p DeskClock
 	mkdir -p $2/res/drawable-hdpi
     cp ../miui/src/packages/apps/DeskClock/res/drawable-hdpi/* $2/res/drawable-hdpi/
+fi
+
+if [ $1 = "SoundRecorder" ];then
+	mkdir -p SoundRecorder
+	mkdir -p $2/res/drawable-hdpi
+    cp ../miui/src/packages/apps/SoundRecorder/res/drawable-hdpi/* $2/res/drawable-hdpi/
 fi
