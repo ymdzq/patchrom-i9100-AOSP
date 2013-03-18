@@ -6,6 +6,8 @@
 
 XMLMERGYTOOL=$PORT_ROOT/tools/ResValuesModify/jar/ResValuesModify
 GIT_APPLY=$PORT_ROOT/tools/git.apply
+MIUI_SRC_DIR=$PORT_ROOT/miui/src
+
 
 curdir=`pwd`
 
@@ -30,11 +32,14 @@ fi
 
 if [ $1 = "Phone" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
-	cp ../miui/src/packages/apps/Phone/res/drawable-hdpi/* $2/res/drawable-hdpi/
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/Miui$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
 if [ $1 = "ThemeManager" ];then
     $XMLMERGYTOOL $1/res/values $2/res/values
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
 if [ $1 = "MiuiHome" ];then
@@ -48,37 +53,54 @@ if [ $1 = "MiuiHome" ];then
         exit 1
     done
 
-    cp ../miui/src/packages/apps/MiuiHome/res/drawable-hdpi/* $2/res/drawable-hdpi/
-fi
+	$XMLMERGYTOOL $1/res/values $2/res/values
+    mkdir -p $2/res/drawable-hdpi/
+    mkdir -p $2/res/drawable-largeui-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-largeui-hdpi/*.png $2/res/drawable-largeui-hdpi/
 
-if [ $1 = "FileExplorer" ];then
-	mkdir -p FileExplorer
-    cp ../miui/src/packages/apps/$1/res/drawable-hdpi/* $2/res/drawable-hdpi/
 fi
 
 if [ $1 = "Backup" ];then
-	mkdir -p Backup
-    cp ../miui/src/packages/apps/Backup/res/drawable-hdpi/* $2/res/drawable-hdpi/
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
-if [ $1 = "MiuiGallery" ];then
-	mkdir -p MiuiGallery
-    cp ../miui/src/packages/apps/MiuiGallery/res/drawable-hdpi/* $2/res/drawable-hdpi/
-fi
-
-if [ $1 = "Music" ];then
-	mkdir -p Music
-    cp ../miui/src/packages/apps/MiuiMusic/res/drawable-hdpi/* $2/res/drawable-hdpi/
+if [ $1 = "Contacts" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
 if [ $1 = "DeskClock" ];then
-	mkdir -p DeskClock
-	mkdir -p $2/res/drawable-hdpi
-    cp ../miui/src/packages/apps/DeskClock/res/drawable-hdpi/* $2/res/drawable-hdpi/
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    mkdir -p $2/res/drawable-xlarge-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-xlarge-hdpi/*.png $2/res/drawable-xlarge-hdpi/
+fi
+
+if [ $1 = "FileExplorer" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+fi
+
+if [ $1 = "MiuiGallery" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+fi
+
+if [ $1 = "Music" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/Miui$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
 if [ $1 = "SoundRecorder" ];then
-	mkdir -p SoundRecorder
-	mkdir -p $2/res/drawable-hdpi
-    cp ../miui/src/packages/apps/SoundRecorder/res/drawable-hdpi/* $2/res/drawable-hdpi/
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi

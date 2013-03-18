@@ -3863,6 +3863,8 @@
 
     iput-object v0, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
 
+    invoke-virtual {p0}, Landroid/app/ContextImpl;->setResOverlay()V
+
     .line 1571
     iget-object v0, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
 
@@ -3899,7 +3901,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+    iget-object v2, p1, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p3, v2, v0, v1}, Landroid/app/ActivityThread;->getTopLevelResources(Ljava/lang/String;Ljava/lang/String;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
 
@@ -5060,6 +5062,27 @@
     return-void
 .end method
 
+.method setResOverlay()V
+    .locals 2
+
+    .prologue
+    iget-object v0, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/app/ContextImpl;->mBasePackageName:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
+
+    iget-object v1, p0, Landroid/app/ContextImpl;->mBasePackageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->setOverlay(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
 .method public setTheme(I)V
     .locals 0
     .parameter "resid"

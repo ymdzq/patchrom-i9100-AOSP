@@ -10,7 +10,8 @@
         Landroid/view/LayoutInflater$FactoryMerger;,
         Landroid/view/LayoutInflater$Factory2;,
         Landroid/view/LayoutInflater$Factory;,
-        Landroid/view/LayoutInflater$Filter;
+        Landroid/view/LayoutInflater$Filter;,
+        Landroid/view/LayoutInflater$Injector;
     }
 .end annotation
 
@@ -1641,6 +1642,9 @@
     .parameter "resource"
     .parameter "root"
     .parameter "attachToRoot"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     .line 394
