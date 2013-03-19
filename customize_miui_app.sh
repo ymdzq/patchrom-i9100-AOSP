@@ -99,6 +99,7 @@ if [ $1 = "Music" ];then
     mkdir -p $2/res/raw-hdpi/
     cp $MIUI_SRC_DIR/packages/apps/Miui$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 	cp $MIUI_SRC_DIR/packages/apps/Miui$1/res/raw-hdpi/* $2/res/raw-hdpi/
+	rm -rf $2/res/raw-xhdpi/
 fi
 
 if [ $1 = "SoundRecorder" ];then
