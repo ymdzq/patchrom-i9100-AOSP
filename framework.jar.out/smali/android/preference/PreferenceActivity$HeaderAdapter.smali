@@ -202,7 +202,9 @@
     .line 286
     iget-object v4, v1, Landroid/preference/PreferenceActivity$HeaderAdapter$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setVisibility(I)V
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 287
     iget-object v4, v1, Landroid/preference/PreferenceActivity$HeaderAdapter$HeaderViewHolder;->summary:Landroid/widget/TextView;

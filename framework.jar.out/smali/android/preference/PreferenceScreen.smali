@@ -10,6 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/preference/PreferenceScreen$Injector;,
         Landroid/preference/PreferenceScreen$SavedState;
     }
 .end annotation
@@ -173,6 +174,9 @@
 .method public bind(Landroid/widget/ListView;)V
     .locals 1
     .parameter "listView"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     invoke-virtual {p1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V

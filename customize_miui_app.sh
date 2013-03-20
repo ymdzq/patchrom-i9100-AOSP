@@ -83,7 +83,6 @@ if [ $1 = "DeskClock" ];then
     cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
     cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-xlarge-hdpi/*.png $2/res/drawable-xlarge-hdpi/
 	rm -rf $2/res/drawable-xhdpi/
-	rm -rf $2/res/values-largeui-xhdpi/
 	rm -rf $2/res/values-xhdpi/
 
     $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
@@ -110,7 +109,25 @@ if [ $1 = "Music" ];then
 	rm -rf $2/res/raw-xhdpi/
 fi
 
+if [ $1 = "Notes" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+fi
+
+if [ $1 = "PackageInstaller" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+fi
+
 if [ $1 = "SoundRecorder" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+fi
+
+if [ $1 = "Weather" ];then
     mkdir -p $1
     mkdir -p $2/res/drawable-hdpi/
     cp $MIUI_SRC_DIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/

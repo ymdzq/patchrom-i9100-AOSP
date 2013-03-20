@@ -128,6 +128,12 @@
 
 .field private mNeedInitialFocus:Z
 
+.field private mNightReadMode:Z
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private mOverrideCacheMode:I
 
 .field private mPageCacheCapacity:I
@@ -227,6 +233,8 @@
     iput v6, p0, Landroid/webkit/WebSettingsClassic;->mTextSize:I
 
     .line 58
+    iput-boolean v3, p0, Landroid/webkit/WebSettingsClassic;->mNightReadMode:Z
+
     const-string/jumbo v1, "sans-serif"
 
     iput-object v1, p0, Landroid/webkit/WebSettingsClassic;->mStandardFontFamily:Ljava/lang/String;
@@ -1996,6 +2004,33 @@
     iget-boolean v0, p0, Landroid/webkit/WebSettingsClassic;->mNeedInitialFocus:Z
 
     return v0
+.end method
+
+.method public declared-synchronized getNightReadModeEnabled()Z
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    .line 681
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Landroid/webkit/WebSettingsClassic;->mNightReadMode:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
 .method public declared-synchronized getPluginState()Landroid/webkit/WebSettings$PluginState;

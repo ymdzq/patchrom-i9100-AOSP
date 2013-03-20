@@ -147,6 +147,7 @@
 
     iput-object v1, p0, Landroid/widget/EdgeEffect;->mEdge:Landroid/graphics/drawable/Drawable;
 
+    .line 138
     invoke-static {p1}, Landroid/widget/EdgeEffect$Injector;->getOverScrollGlow(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1

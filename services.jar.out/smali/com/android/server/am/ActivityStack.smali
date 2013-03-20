@@ -10545,6 +10545,9 @@
 .method final resumeTopActivityLocked(Lcom/android/server/am/ActivityRecord;)Z
     .locals 1
     .parameter "prev"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     .line 1398

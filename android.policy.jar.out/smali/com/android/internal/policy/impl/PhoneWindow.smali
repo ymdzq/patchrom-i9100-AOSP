@@ -1900,7 +1900,7 @@
 
     iget-boolean v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->isCompact:Z
 
-    if-eqz v4, :cond_f
+    if-eqz v4, :cond_11
 
     .line 622
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getOptionsPanelGravity()I
@@ -2000,7 +2000,7 @@
 
     iget-object v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->createdPanelView:Landroid/view/View;
 
-    if-eqz v4, :cond_miui_0
+    if-eqz v4, :cond_f
 
     .line 604
     move-object/from16 v0, p1
@@ -2026,18 +2026,8 @@
 
     goto/16 :goto_5
 
-    .line 625
-    .local v2, lp:Landroid/view/WindowManager$LayoutParams;
+    .end local v2           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_f
-    move-object/from16 v0, p1
-
-    iget v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->gravity:I
-
-    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
-
-    goto :goto_6
-
-    :cond_miui_0
     move-object/from16 v0, p1
 
     iget-object v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->decorView:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
@@ -2047,11 +2037,11 @@
     move-result-object v2
 
     .restart local v2       #lp:Landroid/view/ViewGroup$LayoutParams;
-    if-eqz v2, :cond_miui_1
+    if-eqz v2, :cond_10
 
     iget v3, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    :cond_miui_1
+    :cond_10
     move-object/from16 v0, p1
 
     iget-object v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->decorView:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
@@ -2062,7 +2052,18 @@
 
     if-nez v4, :cond_a
 
-    goto :goto_0
+    goto/16 :goto_0
+
+    .line 625
+    .local v2, lp:Landroid/view/WindowManager$LayoutParams;
+    :cond_11
+    move-object/from16 v0, p1
+
+    iget v4, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->gravity:I
+
+    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
+
+    goto :goto_6
 .end method
 
 .method private openPanelsAfterRestore()V
