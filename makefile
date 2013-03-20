@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := Bluetooth MediaProvider Stk
 #local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
-local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager FileExplorer Backup MiuiGallery Music DeskClock SoundRecorder
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager Backup Contacts DeskClock FileExplorer MiuiGallery Music SoundRecorder
 
 include phoneapps.mk
 
