@@ -47,6 +47,8 @@ local-pre-zip-misc:
 	cp other/GalaxyS2Settings.apk $(ZIP_DIR)/system/app/GalaxyS2Settings.apk
 #	cp -rf other/system_etc/* $(ZIP_DIR)/system/etc/
 #	cp -rf other/system_lib/* $(ZIP_DIR)/system/lib/
+	cp other/platform.xml $(ZIP_DIR)/system/etc/permissions/platform.xml
+	cp other/javax.btobex.jar $(ZIP_DIR)/system/framework/javax.btobex.jar
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
