@@ -32,8 +32,6 @@ fi
 
 if [ $1 = "Phone" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
-    mkdir -p $2/res/drawable-hdpi/
-    cp $MIUISRCDIR/packages/apps/Miui$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
 if [ $1 = "ThemeManager" ];then
@@ -82,7 +80,6 @@ if [ $1 = "DeskClock" ];then
     mkdir -p $2/res/drawable-xlarge-hdpi/
     cp $MIUISRCDIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
     cp $MIUISRCDIR/packages/apps/$1/res/drawable-xlarge-hdpi/*.png $2/res/drawable-xlarge-hdpi/
-	rm -rf $2/res/drawable-xhdpi/
 	rm -rf $2/res/values-xhdpi/
 
     $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi

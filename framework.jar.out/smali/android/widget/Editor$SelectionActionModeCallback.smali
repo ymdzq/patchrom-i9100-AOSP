@@ -382,11 +382,11 @@
     :cond_6
     iget-object v3, p0, Landroid/widget/Editor$SelectionActionModeCallback;->this$0:Landroid/widget/Editor;
 
-    invoke-virtual {v3}, Landroid/widget/Editor;->getSelectionController()Landroid/widget/Editor$SelectionModifierCursorController;
+    invoke-virtual {v3}, Landroid/widget/Editor;->getSelectionController()Landroid/widget/MiuiCursorController;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/widget/Editor$SelectionModifierCursorController;->show()V
+    invoke-virtual {v3}, Landroid/widget/MiuiCursorController;->show()V
 
     .line 2718
     iget-object v3, p0, Landroid/widget/Editor$SelectionActionModeCallback;->this$0:Landroid/widget/Editor;
@@ -474,18 +474,16 @@
     :cond_1
     iget-object v0, p0, Landroid/widget/Editor$SelectionActionModeCallback;->this$0:Landroid/widget/Editor;
 
-    iget-object v0, v0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/Editor$SelectionModifierCursorController;
+    iget-object v0, v0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/MiuiCursorController;
 
     if-eqz v0, :cond_2
 
-    .line 2760
     iget-object v0, p0, Landroid/widget/Editor$SelectionActionModeCallback;->this$0:Landroid/widget/Editor;
 
-    iget-object v0, v0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/Editor$SelectionModifierCursorController;
+    iget-object v0, v0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/MiuiCursorController;
 
-    invoke-virtual {v0}, Landroid/widget/Editor$SelectionModifierCursorController;->hide()V
+    invoke-virtual {v0}, Landroid/widget/MiuiCursorController;->hide()V
 
-    .line 2763
     :cond_2
     iget-object v0, p0, Landroid/widget/Editor$SelectionActionModeCallback;->this$0:Landroid/widget/Editor;
 
