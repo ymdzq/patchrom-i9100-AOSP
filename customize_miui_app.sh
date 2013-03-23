@@ -118,6 +118,16 @@ if [ $1 = "PackageInstaller" ];then
     cp $MIUISRCDIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
 fi
 
+if [ $1 = "Provision" ];then
+    mkdir -p $1
+    mkdir -p $2/res/drawable-hdpi/
+    mkdir -p $2/res/drawable-zh-rCN-hdpi/
+    mkdir -p $2/res/drawable-zh-rTW-hdpi/
+    cp $MIUISRCDIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+    cp $MIUISRCDIR/packages/apps/$1/res/drawable-zh-rCN-hdpi/*.png $2/res/drawable-zh-rCN-hdpi/
+    cp $MIUISRCDIR/packages/apps/$1/res/drawable-zh-rTW-hdpi/*.png $2/res/drawable-zh-rTW-hdpi/
+fi
+
 if [ $1 = "SoundRecorder" ];then
     mkdir -p $1
     mkdir -p $2/res/drawable-hdpi/

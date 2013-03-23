@@ -22513,7 +22513,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-direct {p0}, Landroid/widget/Editor;->longClickFeedback()V
+    invoke-direct {p0}, Landroid/widget/TextView;->longClickFeedback()V
 
     const/4 v0, 0x1
 
