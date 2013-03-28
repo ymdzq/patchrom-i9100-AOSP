@@ -17,7 +17,7 @@ local-modified-apps := Gallery2 OriginalSettings
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider Stk
+local-miui-removed-apps := MediaProvider Stk Bluetooth
 #local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
 local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager Backup Contacts DeskClock FileExplorer MiuiGallery Music Notes PackageInstaller Provision SoundRecorder Weather
 
