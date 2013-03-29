@@ -24,6 +24,7 @@ if [ $1 = "Settings" ];then
     done
 
 	$XMLMERGYTOOL $1/res/values $2/res/values
+    $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
 fi
 
 if [ $1 = "Mms" ];then
