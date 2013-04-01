@@ -42,21 +42,21 @@ if [ $1 = "ThemeManager" ];then
 fi
 
 if [ $1 = "MiuiHome" ];then
-    cp $1/*.part out/
-    cd out
-    $GIT_APPLY MiuiHome.part
-    cd ..
-    for file in `find $2 -name *.rej`
-    do
-	echo "Fatal error: MiuiHome patch fail"
-        exit 1
-    done
+    #cp $1/*.part out/
+    #cd out
+    #$GIT_APPLY MiuiHome.part
+    #cd ..
+    #for file in `find $2 -name *.rej`
+    #do
+	#echo "Fatal error: MiuiHome patch fail"
+    #    exit 1
+    #done
 
 	$XMLMERGYTOOL $1/res/values $2/res/values
-    mkdir -p $2/res/drawable-hdpi/
-    mkdir -p $2/res/drawable-largeui-hdpi/
-    cp $MIUISRCDIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
-    cp $MIUISRCDIR/packages/apps/$1/res/drawable-largeui-hdpi/*.png $2/res/drawable-largeui-hdpi/
+    #mkdir -p $2/res/drawable-hdpi/
+    #mkdir -p $2/res/drawable-largeui-hdpi/
+    #cp $MIUISRCDIR/packages/apps/$1/res/drawable-hdpi/*.png $2/res/drawable-hdpi/
+    #cp $MIUISRCDIR/packages/apps/$1/res/drawable-largeui-hdpi/*.png $2/res/drawable-largeui-hdpi/
 
 fi
 
