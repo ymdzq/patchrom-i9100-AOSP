@@ -1,7 +1,7 @@
 #
 # Makefile for i9100
 #
-local-density := HDPI
+
 # The original zip file, MUST be specified by each product
 local-zip-file     := stockrom.zip
 
@@ -17,9 +17,13 @@ local-modified-apps := Gallery2 OriginalSettings
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider Stk Bluetooth
-local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager DeskClock
-#local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager Backup Contacts DeskClock FileExplorer MiuiGallery Music Notes PackageInstaller Provision SoundRecorder Weather
+local-miui-removed-apps := Bluetooth MediaProvider Stk
+
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
+
+# Config density for co-developers to use the aaps with HDPI or XHDPI resource,
+# Default configrations are HDPI for ics branch and XHDPI for jellybean branch
+local-density := HDPI
 
 include phoneapps.mk
 

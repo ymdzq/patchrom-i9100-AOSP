@@ -28809,8 +28809,6 @@
     .line 2719
     const/16 v29, 0x0
 
-    invoke-static/range {v27 .. v27}, Lcom/android/server/wm/WindowManagerService$Injector;->updateFloatingWindow(Lcom/android/server/wm/WindowState;)V
-
     monitor-exit v30
 
     .line 2997
@@ -30052,6 +30050,8 @@
     move/from16 v1, v31
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/InputMonitor;->updateInputWindowsLw(Z)V
+
+    invoke-static/range {v27 .. v27}, Lcom/android/server/wm/WindowManagerService$Injector;->updateFloatingWindow(Lcom/android/server/wm/WindowState;)V
 
     .line 2989
     monitor-exit v30
