@@ -3,4 +3,5 @@
     <bool name="has_led">false</bool>
     <bool name="has_volume_wake">true</bool>
     <bool name="has_button_light">false</bool>
+    <bool name="emulated_available_internal_memroy">false</bool>
 </resources>
