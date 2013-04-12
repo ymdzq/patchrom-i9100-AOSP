@@ -3899,8 +3899,10 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
 
+    iget-object v2, v2, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+    
     invoke-virtual {p3, v2, v0, v1}, Landroid/app/ActivityThread;->getTopLevelResources(Ljava/lang/String;Ljava/lang/String;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
 
     move-result-object v0
