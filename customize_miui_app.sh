@@ -12,11 +12,8 @@ curdir=`pwd`
 
 
 if [ $1 = "Settings" ];then
-<<<<<<< HEAD
     $XMLMERGYTOOL $1/res/values $2/res/values
-=======
-	$XMLMERGYTOOL $1/res/values $2/res/values
->>>>>>> e82d062b1dc8d2d1e6ff9bcd4908a0e451ef1c6e
+    $XMLMERGYTOOL $1/res/values $2/res/values
     $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
 fi
 
