@@ -91,6 +91,7 @@
 
 .field public contentView:Landroid/widget/RemoteViews;
 
+.field public customizedIcon:Z
 .field public defaults:I
 
 .field public deleteIntent:Landroid/app/PendingIntent;
@@ -552,6 +553,7 @@
 
     .line 599
     :cond_9
+    invoke-direct {p0, p1}, Landroid/app/Notification;->readCustomizedIcon(Landroid/os/Parcel;)V
     return-void
 .end method
 
@@ -590,7 +592,36 @@
     return-object p1
 .end method
 
+.method private readCustomizedIcon(Landroid/os/Parcel;)V
+    .locals 2
+    .parameter "parcel"
 
+    .prologue
+    const/4 v0, 0x1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v1
+    if-ne v1, v0, :cond_0
+    :goto_0
+    iput-boolean v0, p0, Landroid/app/Notification;->customizedIcon:Z
+    return-void
+    :cond_0
+    const/4 v0, 0x0
+    goto :goto_0
+.end method
+.method private writeCustomizedIcon(Landroid/os/Parcel;)V
+    .locals 1
+    .parameter "parcel"
+    .prologue
+    iget-boolean v0, p0, Landroid/app/Notification;->customizedIcon:Z
+    if-eqz v0, :cond_0
+    const/4 v0, 0x1
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    return-void
+    :cond_0
+    const/4 v0, 0x0
+    goto :goto_0
+.end method
 # virtual methods
 .method public clone()Landroid/app/Notification;
     .locals 10
@@ -855,6 +886,8 @@
 
     .line 666
     :cond_8
+    iget-boolean v7, p0, Landroid/app/Notification;->customizedIcon:Z
+    iput-boolean v7, v2, Landroid/app/Notification;->customizedIcon:Z
     return-object v2
 .end method
 
@@ -1581,6 +1614,7 @@
 
     .line 762
     :goto_9
+    invoke-direct {p0, p1}, Landroid/app/Notification;->writeCustomizedIcon(Landroid/os/Parcel;)V
     return-void
 
     .line 687
