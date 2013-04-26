@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9100.zip
 local-previous-target-dir := ~/workspace/ota_base/i9100
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Gallery2 OriginalSettings
+local-modified-apps :=  
 
 local-modified-jars :=
 
@@ -48,7 +48,9 @@ local-pre-zip-misc:
 #	@echo Add Cusettings
 #	cp other/Cusettings.apk $(ZIP_DIR)/system/app/Cusettings.apk
 #	@echo Add USB_switcher
-	cp other/GalaxyS2Settings.apk $(ZIP_DIR)/system/app/GalaxyS2Settings.apk
+	cp other/GalaxyS2Settings.apk $(ZIP_DIR)/system/app/
+	cp other/Gallery2.apk $(ZIP_DIR)/system/app/
+	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/
 #	cp -rf other/system_etc/* $(ZIP_DIR)/system/etc/
 #	cp -rf other/system_lib/* $(ZIP_DIR)/system/lib/
 	cp other/platform.xml $(ZIP_DIR)/system/etc/permissions/platform.xml
