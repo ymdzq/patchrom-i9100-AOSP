@@ -15,6 +15,15 @@ if [ $1 = "Settings" ];then
     $XMLMERGYTOOL $1/res/values $2/res/values
     $XMLMERGYTOOL $1/res/values $2/res/values
     $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
+	cp $1/*.part out/
+	cd out
+	patch -p1 < settings.part
+	cd ..
+	for file in `find $2 -name *.rej`
+	do
+	echo "Fatal error: Settings patch fail"
+            exit 1
+	done
 fi
 
 if [ $1 = "Mms" ];then
