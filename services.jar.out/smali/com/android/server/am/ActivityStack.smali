@@ -6209,29 +6209,26 @@
 
     check-cast v3, Lcom/android/server/am/ActivityRecord;
 
-    .line 3950
     .local v3, r:Lcom/android/server/am/ActivityRecord;
-    iget-boolean v4, v3, Lcom/android/server/am/ActivityRecord;->finishing:Z
+    invoke-static {p3, v3}, Lcom/android/server/am/ActivityStack$Injector;->isDestroyHomeReasonAlwaysOrFinishing(Ljava/lang/String;Lcom/android/server/am/ActivityRecord;)Z
+
+    move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 3948
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 3953
     :cond_1
     iget-boolean v4, v3, Lcom/android/server/am/ActivityRecord;->fullscreen:Z
 
     if-eqz v4, :cond_2
 
-    .line 3954
     const/4 v2, 0x1
 
-    .line 3956
     :cond_2
     if-eqz p1, :cond_3
 
