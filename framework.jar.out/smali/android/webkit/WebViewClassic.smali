@@ -17722,6 +17722,15 @@
     goto :goto_0
 .end method
 
+.method public isHitSelectionHandle()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public isPaused()Z
     .locals 1
 
@@ -17882,6 +17891,15 @@
     const/4 v5, 0x0
 
     goto :goto_0
+.end method
+
+.method public isSelectingText()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/webkit/WebViewClassic;->mSelectingText:Z
+
+    return v0
 .end method
 
 .method public loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -25865,4 +25883,11 @@
     move-result v0
 
     return v0
+.end method
+
+.method public hideFloatView()V
+    .locals 0
+
+    .prologue
+    return-void
 .end method
