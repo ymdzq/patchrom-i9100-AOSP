@@ -34,3 +34,13 @@ then
 
 	#mv "$BUILD_OUT/$SEP_FRAME/smali/miui/"  "$BUILD_OUT/framework2/smali/miui"
 fi
+if [ $2 = "$BUILD_OUT/android.policy" ];then
+    curdir=`pwd`
+    cd overlay/android.policy.jar.out
+    for file in `find . -name *.smali`
+    do
+        dstfile="$curdir/out/android.policy/$file"
+        cat $file >> $dstfile
+    done
+    cd -
+fi
