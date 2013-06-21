@@ -4495,6 +4495,7 @@
 
     .line 3994
     :cond_0
+    :goto_miui_0
     return-void
 
     .line 3987
