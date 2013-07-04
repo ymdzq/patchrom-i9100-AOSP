@@ -100,22 +100,11 @@
     return-object p1
 .end method
 
-.method private doSpNumberAndAntiSpamQuery(Lcom/android/internal/telephony/CallerInfoAsyncQuery$CookieWrapper;I)V
-    .locals 3
-    .parameter "cw"
-    .parameter "token"
 
-    .prologue
-    iget-object v0, p0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->mQueryContext:Landroid/content/Context;
 
-    iget-object v1, p1, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CookieWrapper;->number:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->mCallerInfo:Lcom/android/internal/telephony/CallerInfo;
 
-    invoke-static {v0, v1, v2}, Lmiui/telephony/CallerInfo;->doSpNumberQuery(Landroid/content/Context;Ljava/lang/String;Lcom/android/internal/telephony/CallerInfo;)Lcom/android/internal/telephony/CallerInfo;
 
-    return-void
-.end method
 
 
 # virtual methods
@@ -319,7 +308,6 @@
 
     .line 263
     :cond_9
-    invoke-direct {p0, v8, p1}, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->doSpNumberAndAntiSpamQuery(Lcom/android/internal/telephony/CallerInfoAsyncQuery$CookieWrapper;I)V
 
     iget-object v0, p0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->mCallerInfo:Lcom/android/internal/telephony/CallerInfo;
 
