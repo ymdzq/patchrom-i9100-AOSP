@@ -25,6 +25,17 @@ fi
 
 if [ $2 = "$BUILD_OUT/framework2" ]
 then
+    # apply framework2.part on framework2.jar.out
+    cp -f other/framework2.part out/
+    cd out
+    $PORT_ROOT/tools/git.apply framework2.part
+    cd ..
+    for file3 in `find $2 -name *.rej`
+    do
+	echo "Fatal error: framework2 patch fail"
+        exit 1
+    done
+
     # remove all files at out/framework1 those exist in framework.jar.out
     for file2 in `find framework.jar.out -name *.smali`; do
             file=${file2/framework.jar.out/$BUILD_OUT\/framework2}
