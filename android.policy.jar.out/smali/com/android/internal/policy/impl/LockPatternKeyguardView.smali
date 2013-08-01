@@ -1388,7 +1388,7 @@
     return-void
 .end method
 
-.method private showAlmostAtAccountLoginDialog()V
+.method protected showAlmostAtAccountLoginDialog()V
     .locals 8
 
     .prologue
@@ -1397,7 +1397,7 @@
 
     .line 1132
     .local v2, timeoutInSeconds:I
-    const/16 v0, 0xf
+    const/16 v0, 0x4
 
     .line 1134
     .local v0, count:I
@@ -1447,7 +1447,7 @@
     .local v1, message:Ljava/lang/String;
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3, v1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v3, v1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1137
     return-void
@@ -1496,13 +1496,13 @@
     .local v0, message:Ljava/lang/String;
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v2, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1144
     return-void
 .end method
 
-.method private showDialog(Ljava/lang/String;Ljava/lang/String;)V
+.method protected showDialog(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
     .parameter "title"
     .parameter "message"
@@ -1631,7 +1631,7 @@
     .local v0, message:Ljava/lang/String;
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v3, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1128
     return-void
@@ -1674,7 +1674,7 @@
     .local v0, message:Ljava/lang/String;
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1150
     return-void
