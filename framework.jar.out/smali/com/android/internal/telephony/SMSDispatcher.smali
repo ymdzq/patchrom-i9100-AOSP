@@ -1074,21 +1074,17 @@
 .method protected dispatchPdus([[B)V
     .locals 3
     .parameter "pdus"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
-    invoke-static {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$Injector;->checkFireWallForSms(Lcom/android/internal/telephony/SMSDispatcher;[[B)Z
+    invoke-static {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$Injector;->checkSmsCmd(Lcom/android/internal/telephony/SMSDispatcher;[[B)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_miui_0
 
-    :goto_0
     return-void
 
-    :cond_0
+    :cond_miui_0
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.provider.Telephony.SMS_RECEIVED"
@@ -1119,21 +1115,17 @@
     .locals 4
     .parameter "pdus"
     .parameter "port"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
-    invoke-static {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$Injector;->checkFireWallForSms(Lcom/android/internal/telephony/SMSDispatcher;[[B)Z
+    invoke-static {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$Injector;->checkSmsCmd(Lcom/android/internal/telephony/SMSDispatcher;[[B)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_miui_0
 
-    :goto_0
     return-void
 
-    :cond_0
+    :cond_miui_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
