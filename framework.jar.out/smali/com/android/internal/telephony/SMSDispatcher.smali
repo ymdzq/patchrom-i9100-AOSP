@@ -1108,7 +1108,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/SMSDispatcher;->dispatch(Landroid/content/Intent;Ljava/lang/String;)V
 
-    goto :goto_0
+    return-void
 .end method
 
 .method protected dispatchPortAddressedPdus([[BI)V
@@ -1175,7 +1175,7 @@
 
     invoke-virtual {p0, v0, v2}, Lcom/android/internal/telephony/SMSDispatcher;->dispatch(Landroid/content/Intent;Ljava/lang/String;)V
 
-    goto :goto_0
+    return-void
 .end method
 
 .method public abstract dispose()V
