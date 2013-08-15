@@ -1004,25 +1004,18 @@
 .end method
 
 .method private tileifyIndeterminate(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+    .locals 8
     .parameter "drawable"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
+
     invoke-virtual {p0, p1}, Landroid/widget/ProgressBar;->tileifyIndeterminateMiui(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
-.end method
+    ####### end ################
 
-.method public tileifyIndeterminateMiui(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 8
-    .parameter "drawable"
-
-    .prologue
     const/16 v7, 0x2710
 
     instance-of v5, p1, Landroid/graphics/drawable/AnimationDrawable;
