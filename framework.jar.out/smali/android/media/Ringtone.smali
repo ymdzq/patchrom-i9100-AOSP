@@ -733,7 +733,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 204
     :cond_1
     :goto_1
     iget-object v1, p0, Landroid/media/Ringtone;->mContext:Landroid/content/Context;
@@ -752,7 +751,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 205
     const-string v1, "Ringtone"
 
     const-string v2, "Successfully created local player"

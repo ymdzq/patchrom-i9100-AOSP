@@ -172,9 +172,6 @@
 .method public addPreference(Landroid/preference/Preference;)Z
     .locals 4
     .parameter "preference"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     const/4 v2, 0x1

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+.field static final synthetic $SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sput-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->Introduction:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->HelpScreen:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 
@@ -67,7 +67,7 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->ChoiceTooShort:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 
@@ -83,7 +83,7 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->FirstChoiceValid:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 
@@ -99,7 +99,7 @@
 
     :goto_3
     :try_start_4
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->NeedToConfirm:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 
@@ -115,7 +115,7 @@
 
     :goto_4
     :try_start_5
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->ConfirmWrong:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 
@@ -131,7 +131,7 @@
 
     :goto_5
     :try_start_6
-    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;->ChoiceConfirmed:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 

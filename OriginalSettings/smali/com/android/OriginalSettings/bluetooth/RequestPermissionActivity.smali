@@ -706,7 +706,7 @@
     if-eqz v1, :cond_1
 
     .line 127
-    const-string v1, "com.android.settings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON"
+    const-string v1, "com.android.OriginalSettings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -721,7 +721,7 @@
 
     .line 129
     :cond_1
-    const-string v1, "com.android.settings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON_AND_DISCOVERABLE"
+    const-string v1, "com.android.OriginalSettings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON_AND_DISCOVERABLE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 

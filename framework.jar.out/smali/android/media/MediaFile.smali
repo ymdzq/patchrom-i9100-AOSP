@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/MiuiHook;
-    value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/media/MediaFile$MediaFileType;,
@@ -815,8 +811,6 @@
     const-string/jumbo v2, "video/mp2p"
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
-
-    invoke-static {}, Landroid/media/MediaFile$Injector;->addFLV()V
 
     .line 246
     const-string v0, "MPEG"

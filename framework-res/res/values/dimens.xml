@@ -16,7 +16,7 @@
     <dimen name="navigation_bar_width">42.0dip</dimen>
     <dimen name="status_bar_icon_size">24.0dip</dimen>
     <dimen name="status_bar_content_number_size">48.0sp</dimen>
-    <dimen name="system_bar_height">@dimen/navigation_bar_height</dimen>
+    <item type="dimen" name="system_bar_height">@dimen/navigation_bar_height</item>
     <dimen name="system_bar_icon_size">32.0dip</dimen>
     <dimen name="status_bar_edge_ignore">5.0dip</dimen>
     <dimen name="fastscroll_overlay_size">104.0dip</dimen>

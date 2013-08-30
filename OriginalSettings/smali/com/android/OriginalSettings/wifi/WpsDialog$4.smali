@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+.field static final synthetic $SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+    sput-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;->WPS_COMPLETE:Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;->CONNECTED:Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;
 
@@ -67,7 +67,7 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;->WPS_FAILED:Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;
 

@@ -714,7 +714,7 @@
 
     .line 230
     :cond_1
-    const-string v1, "com.android.settings.quicklaunch.SHORTCUT"
+    const-string v1, "com.android.OriginalSettings.quicklaunch.SHORTCUT"
 
     const/4 v2, 0x0
 
@@ -1042,7 +1042,7 @@
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 201
-    const-string v2, "com.android.settings.quicklaunch.SHORTCUT"
+    const-string v2, "com.android.OriginalSettings.quicklaunch.SHORTCUT"
 
     invoke-virtual {p2}, Lcom/android/OriginalSettings/quicklaunch/ShortcutPreference;->getShortcut()C
 

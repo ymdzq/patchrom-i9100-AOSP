@@ -858,13 +858,3 @@
     .line 126
     return-void
 .end method
-
-.method public suspendRecreate()Z
-    .locals 1
-
-    .prologue
-    .line 137
-    const/4 v0, 0x0
-
-    return v0
-.end method

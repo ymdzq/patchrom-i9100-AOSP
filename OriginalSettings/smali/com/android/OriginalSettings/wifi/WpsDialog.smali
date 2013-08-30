@@ -292,7 +292,7 @@
     iput-object p1, p0, Lcom/android/OriginalSettings/wifi/WpsDialog;->mDialogState:Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;
 
     .line 213
-    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->$SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
     invoke-virtual {p1}, Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;->ordinal()I
 

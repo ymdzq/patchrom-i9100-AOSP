@@ -17,12 +17,12 @@
     <color name="holo_purple">#ffaa66cc</color>
     <color name="holo_blue_bright">#ff00ddff</color>
     <color name="safe_mode_text">#80ffffff</color>
-    <color name="bright_foreground_dark">@color/background_light</color>
-    <color name="bright_foreground_light">@color/background_dark</color>
+    <item type="color" name="bright_foreground_dark">@color/background_light</item>
+    <item type="color" name="bright_foreground_light">@color/background_dark</item>
     <color name="bright_foreground_dark_disabled">#80ffffff</color>
     <color name="bright_foreground_light_disabled">#80000000</color>
-    <color name="bright_foreground_dark_inverse">@color/bright_foreground_light</color>
-    <color name="bright_foreground_light_inverse">@color/bright_foreground_dark</color>
+    <item type="color" name="bright_foreground_dark_inverse">@color/bright_foreground_light</item>
+    <item type="color" name="bright_foreground_light_inverse">@color/bright_foreground_dark</item>
     <color name="dim_foreground_dark">#ffbebebe</color>
     <color name="dim_foreground_dark_disabled">#80bebebe</color>
     <color name="dim_foreground_dark_inverse">#ff323232</color>
@@ -43,11 +43,11 @@
     <color name="perms_dangerous_perm_color">#ff33b5e5</color>
     <color name="shadow">#cc222222</color>
     <color name="search_url_text_normal">#ff7fa87f</color>
-    <color name="search_url_text_selected">@color/black</color>
-    <color name="search_url_text_pressed">@color/black</color>
-    <color name="search_widget_corpus_item_background">@color/lighter_gray</color>
-    <color name="sliding_tab_text_color_active">@color/black</color>
-    <color name="sliding_tab_text_color_shadow">@color/black</color>
+    <item type="color" name="search_url_text_selected">@color/black</item>
+    <item type="color" name="search_url_text_pressed">@color/black</item>
+    <item type="color" name="search_widget_corpus_item_background">@color/lighter_gray</item>
+    <item type="color" name="sliding_tab_text_color_active">@color/black</item>
+    <item type="color" name="sliding_tab_text_color_shadow">@color/black</item>
     <color name="keyguard_text_color_normal">#ffffffff</color>
     <color name="keyguard_text_color_unlock">#ffa7d84c</color>
     <color name="keyguard_text_color_soundoff">#ffffffff</color>
@@ -60,12 +60,12 @@
     <color name="facelock_spotlight_mask">#cc000000</color>
     <color name="background_holo_dark">#ff000000</color>
     <color name="background_holo_light">#fff3f3f3</color>
-    <color name="bright_foreground_holo_dark">@color/background_holo_light</color>
-    <color name="bright_foreground_holo_light">@color/background_holo_dark</color>
+    <item type="color" name="bright_foreground_holo_dark">@color/background_holo_light</item>
+    <item type="color" name="bright_foreground_holo_light">@color/background_holo_dark</item>
     <color name="bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
     <color name="bright_foreground_disabled_holo_light">#ffb2b2b2</color>
-    <color name="bright_foreground_inverse_holo_dark">@color/bright_foreground_holo_light</color>
-    <color name="bright_foreground_inverse_holo_light">@color/bright_foreground_holo_dark</color>
+    <item type="color" name="bright_foreground_inverse_holo_dark">@color/bright_foreground_holo_light</item>
+    <item type="color" name="bright_foreground_inverse_holo_light">@color/bright_foreground_holo_dark</item>
     <color name="dim_foreground_holo_dark">#ffbebebe</color>
     <color name="dim_foreground_disabled_holo_dark">#80bebebe</color>
     <color name="dim_foreground_inverse_holo_dark">#ff323232</color>

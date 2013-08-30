@@ -567,7 +567,7 @@
 
     move-result-object v0
 
-    const-string v1, "com.android.settings.CryptKeeper.DEBUG_FORCE_VIEW"
+    const-string v1, "com.android.OriginalSettings.CryptKeeper.DEBUG_FORCE_VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
@@ -586,7 +586,7 @@
 
     move-result-object v0
 
-    const-string v1, "com.android.settings.CryptKeeper.DEBUG_FORCE_VIEW"
+    const-string v1, "com.android.OriginalSettings.CryptKeeper.DEBUG_FORCE_VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 

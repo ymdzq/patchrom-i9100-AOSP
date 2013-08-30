@@ -31,6 +31,10 @@
 
 .field private static final SELECTOR_MAX_FLING_VELOCITY_ADJUSTMENT:I = 0x8
 
+.field private SELECTOR_MIDDLE_ITEM_INDEX:I
+
+.field private SELECTOR_WHEEL_ITEM_COUNT:I
+
 .field private static final SIZE_UNSPECIFIED:I = -0x1
 
 .field private static final SNAP_SCROLL_DURATION:I = 0x12c
@@ -45,18 +49,6 @@
 
 
 # instance fields
-.field private SELECTOR_MIDDLE_ITEM_INDEX:I
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-.end field
-
-.field private SELECTOR_WHEEL_ITEM_COUNT:I
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-.end field
-
 .field private mAccessibilityNodeProvider:Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;
 
 .field private final mAdjustScroller:Landroid/widget/Scroller;
@@ -110,10 +102,6 @@
 .field private mLongPressUpdateInterval:J
 
 .field private mMaxHeight:I
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-.end field
 
 .field private mMaxValue:I
 
@@ -150,10 +138,6 @@
 .field private final mSelectionDividerHeight:I
 
 .field private mSelectionDividersDistance:I
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-.end field
 
 .field private mSelectorElementHeight:I
 
@@ -169,10 +153,6 @@
 .end field
 
 .field private mSelectorIndices:[I
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-.end field
 
 .field private mSelectorTextGapHeight:I
 
@@ -3271,38 +3251,33 @@
 
 .method private showSoftInput()V
     .locals 3
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     const/4 v2, 0x0
 
     iget-boolean v1, p0, Landroid/widget/NumberPicker;->mNeedSoftInput:Z
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_miui_0
 
-    :cond_0
-    :goto_0
     return-void
 
-    :cond_1
+    :cond_miui_0
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
     .local v0, inputMethodManager:Landroid/view/inputmethod/InputMethodManager;
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-boolean v1, p0, Landroid/widget/NumberPicker;->mHasSelectorWheel:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_0
 
     iget-object v1, p0, Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setVisibility(I)V
 
-    :cond_2
+    :cond_0
     iget-object v1, p0, Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->requestFocus()Z
@@ -3311,7 +3286,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    goto :goto_0
+    :cond_1
+    return-void
 .end method
 
 .method private tryComputeMaxWidth()V

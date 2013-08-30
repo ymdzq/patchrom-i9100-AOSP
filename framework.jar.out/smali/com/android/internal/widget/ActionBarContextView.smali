@@ -172,9 +172,6 @@
 
 .method private initTitle()V
     .locals 9
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     const/16 v6, 0x8
@@ -187,16 +184,14 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_miui_0
 
-    :cond_0
-    :goto_0
     return-void
 
-    :cond_1
+    :cond_miui_0
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    if-nez v3, :cond_3
+    if-nez v3, :cond_1
 
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarContextView;->getContext()Landroid/content/Context;
 
@@ -256,7 +251,7 @@
     .line 183
     iget v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleStyleRes:I
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_0
 
     .line 184
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
@@ -268,10 +263,10 @@
     invoke-virtual {v3, v7, v8}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 186
-    :cond_2
+    :cond_0
     iget v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleStyleRes:I
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_1
 
     .line 187
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleView:Landroid/widget/TextView;
@@ -284,7 +279,7 @@
 
     .line 191
     .end local v2           #inflater:Landroid/view/LayoutInflater;
-    :cond_3
+    :cond_1
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
 
     iget-object v7, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitle:Ljava/lang/CharSequence;
@@ -305,46 +300,46 @@
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_5
 
     move v1, v4
 
     .line 195
     .local v1, hasTitle:Z
-    :goto_1
+    :goto_0
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitle:Ljava/lang/CharSequence;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_6
 
     move v0, v4
 
     .line 196
     .local v0, hasSubtitle:Z
-    :goto_2
+    :goto_1
     iget-object v4, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleView:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     move v3, v5
 
-    :goto_3
+    :goto_2
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 197
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_2
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_3
 
-    :cond_4
+    :cond_2
     move v6, v5
 
-    :cond_5
+    :cond_3
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 198
@@ -354,7 +349,7 @@
 
     move-result-object v3
 
-    if-nez v3, :cond_0
+    if-nez v3, :cond_4
 
     .line 199
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
@@ -362,29 +357,30 @@
     invoke-virtual {p0, v3}, Lcom/android/internal/widget/ActionBarContextView;->addView(Landroid/view/View;)V
 
     .line 201
-    goto/16 :goto_0
+    :cond_4
+    return-void
 
     .end local v0           #hasSubtitle:Z
     .end local v1           #hasTitle:Z
-    :cond_6
+    :cond_5
     move v1, v5
 
     .line 194
-    goto :goto_1
+    goto :goto_0
 
     .restart local v1       #hasTitle:Z
-    :cond_7
+    :cond_6
     move v0, v5
 
     .line 195
-    goto :goto_2
+    goto :goto_1
 
     .restart local v0       #hasSubtitle:Z
-    :cond_8
+    :cond_7
     move v3, v6
 
     .line 196
-    goto :goto_3
+    goto :goto_2
 .end method
 
 .method private makeInAnimation()Landroid/animation/Animator;

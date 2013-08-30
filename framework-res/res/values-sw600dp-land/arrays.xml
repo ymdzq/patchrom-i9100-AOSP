@@ -36,10 +36,10 @@
         <item>@drawable/ic_lockscreen_camera</item>
         <item>@null</item>
     </array>
-    <array name="lockscreen_target_descriptions_with_camera">
+    <string-array name="lockscreen_target_descriptions_with_camera">
         <item>@string/description_target_unlock</item>
         <item>@string/description_target_search</item>
         <item>@string/description_target_camera</item>
         <item>@null</item>
-    </array>
+    </string-array>
 </resources>

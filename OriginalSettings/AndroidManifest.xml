@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest android:sharedUserId="android.uid.system" android:versionCode="16" android:versionName="4.1.2-eng.faryaab.20121017.131954" package="com.android.OriginalSettings" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
-    <original-package android:name="com.android.settings" />
+    <original-package android:name="com.android.OriginalSettings" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
@@ -109,7 +108,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.NoActionBar" android:name=".wifi.WifiSettingsForSetupWizardXL" android:exported="true" android:clearTaskOnLaunch="true" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@*android:style/Theme.Holo.NoActionBar" android:name=".wifi.WifiSettingsForSetupWizardXL" android:exported="true" android:clearTaskOnLaunch="true" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize" />
         <activity android:label="@string/wifi_advanced_settings_label" android:name="Settings$AdvancedWifiSettingsActivity" android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:parentActivityName="Settings$WifiSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -122,28 +121,28 @@
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_TITLE" android:resource="@string/wifi_settings" />
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_CLASS" android:value="com.android.OriginalSettings.Settings$WifiSettingsActivity" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiInfo" android:parentActivityName="Settings$WifiSettingsActivity">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiInfo" android:parentActivityName="Settings$WifiSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiConfigInfo" android:parentActivityName="Settings$WifiSettingsActivity">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiConfigInfo" android:parentActivityName="Settings$WifiSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiAPITest">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiAPITest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiStatusTest">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:name=".wifi.WifiStatusTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
@@ -180,7 +179,7 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.bluetooth.BluetoothSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/bluetooth_settings" />
         </activity-alias>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_picker" android:name=".bluetooth.DevicePickerActivity" android:clearTaskOnLaunch="true" android:parentActivityName="Settings">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_picker" android:name=".bluetooth.DevicePickerActivity" android:clearTaskOnLaunch="true" android:parentActivityName="Settings">
             <intent-filter>
                 <action android:name="android.bluetooth.devicepicker.action.LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -238,7 +237,7 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.DateTimeSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/date_time_settings" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.NoActionBar" android:label="@string/date_and_time" android:name="DateTimeSettingsSetupWizard" android:screenOrientation="behind">
+        <activity android:theme="@*android:style/Theme.Holo.NoActionBar" android:label="@string/date_and_time" android:name="DateTimeSettingsSetupWizard" android:screenOrientation="behind">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -311,7 +310,7 @@
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_TITLE" android:resource="@string/language_keyboard_settings_title" />
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_CLASS" android:value="com.android.OriginalSettings.Settings$InputMethodAndLanguageSettingsActivity" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" android:label="@string/user_dict_settings_titlebar" android:name=".inputmethod.UserDictionaryAddWordActivity" android:excludeFromRecents="true" android:windowSoftInputMode="stateVisible" android:noHistory="true">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.NoActionBar" android:label="@string/user_dict_settings_titlebar" android:name=".inputmethod.UserDictionaryAddWordActivity" android:excludeFromRecents="true" android:windowSoftInputMode="stateVisible" android:noHistory="true">
             <intent-filter>
                 <action android:name="com.android.OriginalSettings.USER_DICTIONARY_INSERT" />
                 <action android:name="com.android.OriginalSettings.USER_DICTIONARY_EDIT" />
@@ -371,7 +370,7 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.DockSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/dock_settings" />
         </activity-alias>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_info_settings" android:name="Settings$DeviceInfoSettingsActivity" android:parentActivityName="Settings">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_info_settings" android:name="Settings$DeviceInfoSettingsActivity" android:parentActivityName="Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.DEVICE_INFO_SETTINGS" />
@@ -381,13 +380,13 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.DeviceInfoSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/about_settings" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Panel" android:label="@string/settings_license_activity_title" android:name="SettingsLicenseActivity" android:configChanges="orientation|screenSize">
+        <activity android:theme="@*android:style/Theme.Holo.Panel" android:label="@string/settings_license_activity_title" android:name="SettingsLicenseActivity" android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.settings.LICENSE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:label="@string/settings_safetylegal_activity_title" android:name="SettingsSafetyLegalActivity">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:label="@string/settings_safetylegal_activity_title" android:name="SettingsSafetyLegalActivity">
             <intent-filter>
                 <action android:name="android.settings.SAFETY" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -486,7 +485,7 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.PrivacySettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/privacy_settings" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:name="SetFullBackupPassword" android:exported="false" />
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:name="SetFullBackupPassword" android:exported="false" />
         <activity android:theme="@style/Transparent" android:name="CredentialStorage" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="com.android.credentials.UNLOCK" />
@@ -512,13 +511,13 @@
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_TITLE" android:resource="@string/security_settings_title" />
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_CLASS" android:value="com.android.OriginalSettings.Settings$SecuritySettingsActivity" />
         </activity-alias>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_admin_add_title" android:name="DeviceAdminAdd" android:clearTaskOnLaunch="true">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_admin_add_title" android:name="DeviceAdminAdd" android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.app.action.ADD_DEVICE_ADMIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/sim_lock_settings" android:name="IccLockSettings" android:process="com.android.phone" android:parentActivityName="Settings$SecuritySettingsActivity">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/sim_lock_settings" android:name="IccLockSettings" android:process="com.android.phone" android:parentActivityName="Settings$SecuritySettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -556,7 +555,7 @@
         <activity android:name="ChooseLockPattern" android:exported="false" />
         <activity android:name="ChooseLockPassword" android:exported="false" android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name="ChooseLockPatternTutorial" android:exported="false" />
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_status_activity_title" android:name=".deviceinfo.Status" android:process="com.android.phone" android:parentActivityName="Settings$DeviceInfoSettingsActivity">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/device_status_activity_title" android:name=".deviceinfo.Status" android:process="com.android.phone" android:parentActivityName="Settings$DeviceInfoSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -574,8 +573,8 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.deviceinfo.Memory" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/storage_settings" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:name=".deviceinfo.MiscFilesHandler" />
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/apn_edit" android:name="ApnEditor">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:name=".deviceinfo.MiscFilesHandler" />
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/apn_edit" android:name="ApnEditor">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -622,7 +621,7 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.DevelopmentSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/development_settings" />
         </activity-alias>
-        <activity android:theme="@android:style/Theme.Holo.Dialog" android:label="@string/select_application" android:name=".AppPicker" />
+        <activity android:theme="@*android:style/Theme.Holo.Dialog" android:label="@string/select_application" android:name=".AppPicker" />
         <activity android:label="@string/storage_title_usb" android:name="Settings$UsbSettingsActivity" android:clearTaskOnLaunch="true" android:parentActivityName="Settings$StorageSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -641,7 +640,7 @@
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_TITLE" android:resource="@string/storage_settings_title" />
             <meta-data android:name="com.android.OriginalSettings.PARENT_FRAGMENT_CLASS" android:value="com.android.OriginalSettings.Settings$StorageSettingsActivity" />
         </activity-alias>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.BluetoothPairingDialog" android:excludeFromRecents="true">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.BluetoothPairingDialog" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -664,14 +663,14 @@
             </intent-filter>
         </receiver>
         <service android:name=".bluetooth.DockService" />
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_permission_request" android:name=".bluetooth.RequestPermissionActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_permission_request" android:name=".bluetooth.RequestPermissionActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE" />
                 <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.RequestPermissionHelperActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true" />
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.RequestPermissionHelperActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true" />
         <receiver android:name=".bluetooth.BluetoothPairingRequest">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
@@ -684,14 +683,14 @@
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_CANCEL" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_connection_permission_request" android:name=".bluetooth.BluetoothPermissionActivity" android:permission="android.permission.BLUETOOTH_ADMIN" android:excludeFromRecents="true">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:label="@string/bluetooth_connection_permission_request" android:name=".bluetooth.BluetoothPermissionActivity" android:permission="android.permission.BLUETOOTH_ADMIN" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_REQUEST" />
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_CANCEL" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Dialog.Alert" android:label="@string/activity_picker_label" android:name="ActivityPicker" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@*android:style/Theme.Dialog.Alert" android:label="@string/activity_picker_label" android:name="ActivityPicker" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.intent.action.PICK_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -742,7 +741,7 @@
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
             </intent-filter>
         </activity-alias>
-        <activity android:theme="@android:style/Theme.Dialog" android:name="BandMode" android:process="com.android.phone">
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="BandMode" android:process="com.android.phone">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -761,13 +760,13 @@
                 <data android:scheme="android_secret_code" android:host="4636" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:label="@string/widget_picker_title" android:name="AppWidgetPickActivity" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:label="@string/widget_picker_title" android:name="AppWidgetPickActivity" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_PICK" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:name="AllowBindAppWidgetActivity" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog.Alert" android:name="AllowBindAppWidgetActivity" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_BIND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -802,22 +801,22 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.accounts.AccountSyncSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/account_settings" />
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Dialog" android:label="@string/account_sync_settings_title" android:name=".accounts.SyncSettingsActivity">
+        <activity android:theme="@*android:style/Theme.Holo.Dialog" android:label="@string/account_sync_settings_title" android:name=".accounts.SyncSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.SYNC_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/header_add_an_account" android:name="com.android.OriginalSettings.accounts.AddAccountSettings" android:configChanges="keyboardHidden|orientation|screenSize" android:parentActivityName="Settings$ManageAccountsSettingsActivity">
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/header_add_an_account" android:name="com.android.OriginalSettings.accounts.AddAccountSettings" android:configChanges="keyboardHidden|orientation|screenSize" android:parentActivityName="Settings$ManageAccountsSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/header_add_an_account" android:name="com.android.OriginalSettings.accounts.ChooseAccountActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:theme="@android:style/Theme.Holo.NoActionBar" android:name=".CryptKeeper" android:excludeFromRecents="true" android:launchMode="singleTop" android:configChanges="keyboard|keyboardHidden|uiMode" android:windowSoftInputMode="adjustResize" android:immersive="true">
+        <activity android:theme="@*android:style/Theme.Holo.DialogWhenLarge" android:label="@string/header_add_an_account" android:name="com.android.OriginalSettings.accounts.ChooseAccountActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.Holo.NoActionBar" android:name=".CryptKeeper" android:excludeFromRecents="true" android:launchMode="singleTop" android:configChanges="keyboard|keyboardHidden|uiMode" android:windowSoftInputMode="adjustResize" android:immersive="true">
             <intent-filter android:priority="10">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />

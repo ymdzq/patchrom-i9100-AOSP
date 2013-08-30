@@ -13,6 +13,6 @@
     <color name="crypt_keeper_clock_foreground">#ff666666</color>
     <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
     <color name="divider_color">#20ffffff</color>
-    <color name="title_color">@android:color/holo_blue_light</color>
+    <item type="color" name="title_color">@*android:color/holo_blue_light</item>
     <color name="setup_divider_color">#ff333333</color>
 </resources>

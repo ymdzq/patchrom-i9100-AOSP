@@ -15,6 +15,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/policy/impl/PasswordUnlockScreen$MiuiPasswordEntryTextWatcher;,
         Lcom/android/internal/policy/impl/PasswordUnlockScreen$Injector;
     }
 .end annotation
@@ -1309,16 +1310,6 @@
 
     .line 291
     return-void
-.end method
-
-.method public suspendRecreate()Z
-    .locals 1
-
-    .prologue
-    .line 262
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method verifyPassword(Ljava/lang/String;)V

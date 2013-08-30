@@ -235,22 +235,17 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 7
     .parameter "canvas"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->onDrawMiui(Landroid/graphics/Canvas;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_miui_0
 
-    :cond_0
-    :goto_0
     return-void
 
-    :cond_1
+    :cond_miui_0
     invoke-super {p0, p1}, Landroid/widget/Button;->onDraw(Landroid/graphics/Canvas;)V
 
     iget-object v0, p0, Landroid/widget/CompoundButton;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
@@ -275,7 +270,7 @@
     .local v3, y:I
     sparse-switch v2, :sswitch_data_0
 
-    :goto_1
+    :goto_0
     const/4 v4, 0x0
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -289,9 +284,17 @@
     .line 248
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    goto :goto_0
+    .line 250
+    .end local v1           #height:I
+    .end local v2           #verticalGravity:I
+    .end local v3           #y:I
+    :cond_0
+    return-void
 
     .line 240
+    .restart local v1       #height:I
+    .restart local v2       #verticalGravity:I
+    .restart local v3       #y:I
     :sswitch_0
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
 
@@ -300,7 +303,7 @@
     sub-int v3, v4, v1
 
     .line 241
-    goto :goto_1
+    goto :goto_0
 
     .line 243
     :sswitch_1
@@ -312,11 +315,9 @@
 
     div-int/lit8 v3, v4, 0x2
 
-    goto :goto_1
+    goto :goto_0
 
     .line 238
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x10 -> :sswitch_1

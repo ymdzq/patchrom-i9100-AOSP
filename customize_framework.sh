@@ -16,10 +16,14 @@ then
             rm -rf "$file"
     done
 
+	rm -rf "$BUILD_OUT/framework/smali/com/google/android/mms"
+
     # move some smali to create a separate $SEP_FRAME.jar
     # including: smali/miui smali/android/widget
-	#mkdir -p "$BUILD_OUT/$SEP_FRAME/smali"
+	mkdir -p "$BUILD_OUT/$SEP_FRAME/smali"
     #rm -rf $BUILD_OUT/$SEP_FRAME/smali/miui
+	mkdir -p "$BUILD_OUT/$SEP_FRAME/smali/android"
+    mv "$BUILD_OUT/framework/smali/android/widget" "$BUILD_OUT/$SEP_FRAME/smali/android/"
 	#mv "$BUILD_OUT/framework/smali/miui" "$BUILD_OUT/$SEP_FRAME/smali"
 fi
 
@@ -43,15 +47,8 @@ then
             rm -rf "$file"
     done
 
+	cp -rf "$BUILD_OUT/framework_miui/smali/com/google/android/mms" "$BUILD_OUT/framework2/smali/com/google/android"
+	mv "$BUILD_OUT/$SEP_FRAME/smali/android/widget/"  "$BUILD_OUT/framework2/smali/android/widget"
 	#mv "$BUILD_OUT/$SEP_FRAME/smali/miui/"  "$BUILD_OUT/framework2/smali/miui"
-fi
-if [ $2 = "$BUILD_OUT/android.policy" ];then
-    curdir=`pwd`
-    cd overlay/android.policy.jar.out
-    for file in `find . -name *.smali`
-    do
-        dstfile="$curdir/out/android.policy/$file"
-        cat $file >> $dstfile
-    done
-    cd -
+	rm -rf $BUILD_OUT/$SEP_FRAME
 fi

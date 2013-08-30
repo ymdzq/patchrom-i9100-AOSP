@@ -709,7 +709,6 @@
 
     move-result-object v2
 
-    .line 174
     .local v2, dr:Landroid/graphics/drawable/Drawable;
 
     invoke-static {v2}, Lmiui/content/res/IconCustomizer;->generateIconStyleDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/BitmapDrawable;
@@ -718,13 +717,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 186
     .end local v2           #dr:Landroid/graphics/drawable/Drawable;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 178
     :cond_1
     iget-object v3, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 

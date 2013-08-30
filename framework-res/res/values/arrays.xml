@@ -364,53 +364,53 @@
         <item>@drawable/ic_lockscreen_soundon</item>
         <item>@null</item>
     </array>
-    <array name="lockscreen_target_descriptions_when_silent">
+    <string-array name="lockscreen_target_descriptions_when_silent">
         <item>@string/description_target_unlock</item>
         <item>@string/description_target_search</item>
         <item>@string/description_target_soundon</item>
         <item>@null</item>
-    </array>
-    <array name="lockscreen_direction_descriptions">
+    </string-array>
+    <string-array name="lockscreen_direction_descriptions">
         <item>@string/description_direction_right</item>
         <item>@string/description_direction_up</item>
         <item>@string/description_direction_left</item>
         <item>@null</item>
-    </array>
+    </string-array>
     <array name="lockscreen_targets_when_soundon">
         <item>@drawable/ic_lockscreen_unlock</item>
         <item>@drawable/ic_action_assist_generic</item>
         <item>@drawable/ic_lockscreen_silent</item>
         <item>@null</item>
     </array>
-    <array name="lockscreen_target_descriptions_when_soundon">
+    <string-array name="lockscreen_target_descriptions_when_soundon">
         <item>@string/description_target_unlock</item>
         <item>@string/description_target_search</item>
         <item>@string/description_target_silent</item>
         <item>@null</item>
-    </array>
+    </string-array>
     <array name="lockscreen_targets_with_camera">
         <item>@drawable/ic_lockscreen_unlock</item>
         <item>@drawable/ic_action_assist_generic</item>
         <item>@drawable/ic_lockscreen_camera</item>
         <item>@null</item>
     </array>
-    <array name="lockscreen_target_descriptions_with_camera">
+    <string-array name="lockscreen_target_descriptions_with_camera">
         <item>@string/description_target_unlock</item>
         <item>@string/description_target_search</item>
         <item>@string/description_target_camera</item>
         <item>@null</item>
-    </array>
+    </string-array>
     <array name="lockscreen_chevron_drawables">
         <item>@drawable/ic_lockscreen_chevron_right</item>
         <item>@null</item>
         <item>@null</item>
         <item>@null</item>
     </array>
-    <array name="reboot_options">
+    <string-array name="reboot_options">
         <item>@string/reboot</item>
         <item>@string/reboot_recovery</item>
         <item>@string/reboot_download</item>
-    </array>
+    </string-array>
     <string-array name="reboot_values">
         <item></item>
         <item>recovery</item>

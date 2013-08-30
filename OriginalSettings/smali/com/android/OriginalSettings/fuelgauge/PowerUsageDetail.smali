@@ -1324,7 +1324,7 @@
 
     .line 343
     .local v5, removeHeader:Z
-    sget-object v6, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sget-object v6, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     iget-object v8, p0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail;->mDrainType:Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;
 

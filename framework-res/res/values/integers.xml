@@ -28,9 +28,9 @@
     <integer name="config_lowBatteryCloseWarningLevel">20</integer>
     <integer name="config_defaultNotificationLedOn">500</integer>
     <integer name="config_defaultNotificationLedOff">2000</integer>
-    <integer name="config_notificationsBatteryLowARGB">-65536</integer>
-    <integer name="config_notificationsBatteryMediumARGB">-256</integer>
-    <integer name="config_notificationsBatteryFullARGB">-16711936</integer>
+    <integer name="config_notificationsBatteryLowARGB">0xffff0000</integer>
+    <integer name="config_notificationsBatteryMediumARGB">0xffffff00</integer>
+    <integer name="config_notificationsBatteryFullARGB">0xff00ff00</integer>
     <integer name="config_notificationsBatteryLedOn">125</integer>
     <integer name="config_notificationsBatteryLedOff">2875</integer>
     <integer name="config_longPressOnHomeBehavior">2</integer>
@@ -54,6 +54,6 @@
     <integer name="max_action_buttons">2</integer>
     <integer name="preferences_left_pane_weight">4</integer>
     <integer name="preferences_right_pane_weight">6</integer>
-    <integer name="preference_screen_header_scrollbarStyle">33554432</integer>
-    <integer name="preference_fragment_scrollbarStyle">33554432</integer>
+    <integer name="preference_screen_header_scrollbarStyle">0x2000000</integer>
+    <integer name="preference_fragment_scrollbarStyle">0x2000000</integer>
 </resources>

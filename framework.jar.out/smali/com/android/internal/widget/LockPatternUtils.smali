@@ -377,20 +377,17 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 750
     const-string v3, "lockscreen.password_salt"
 
     invoke-virtual {p0, v3, v4, v5}, Lcom/android/internal/widget/LockPatternUtils;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v1
 
-    .line 751
     .local v1, salt:J
     cmp-long v3, v1, v4
 
     if-nez v3, :cond_0
 
-    .line 753
     :try_start_0
     const-string v3, "SHA1PRNG"
 
@@ -1597,20 +1594,17 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 929
     const-string v6, "lockscreen.lockoutattemptdeadline"
 
     invoke-virtual {p0, v6, v4, v5}, Lcom/android/internal/widget/LockPatternUtils;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    .line 930
     .local v0, deadline:J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 931
     .local v2, now:J
     cmp-long v6, v0, v2
 
@@ -1935,14 +1929,12 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 873
     const-string v2, "lock_biometric_weak_flags"
 
     invoke-virtual {p0, v2, v4, v5}, Lcom/android/internal/widget/LockPatternUtils;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    .line 874
     .local v0, currentFlag:J
     const-wide/16 v2, 0x1
 
@@ -2017,14 +2009,12 @@
 
     const/4 v6, 0x0
 
-    .line 802
     const-string v8, "lockscreen.password_type"
 
     invoke-virtual {p0, v8, v9, v10}, Lcom/android/internal/widget/LockPatternUtils;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v3
 
-    .line 803
     .local v3, mode:J
     const-string v8, "lockscreen.password_type_alternate"
 

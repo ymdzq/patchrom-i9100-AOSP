@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$settings$ConfirmLockPattern$Stage:[I
+.field static final synthetic $SwitchMap$com$android$OriginalSettings$ConfirmLockPattern$Stage:[I
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$settings$ConfirmLockPattern$Stage:[I
+    sput-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ConfirmLockPattern$Stage:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$settings$ConfirmLockPattern$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ConfirmLockPattern$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;->NeedToUnlock:Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$settings$ConfirmLockPattern$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ConfirmLockPattern$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;->NeedToUnlockWrong:Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;
 
@@ -67,7 +67,7 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$settings$ConfirmLockPattern$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ConfirmLockPattern$Stage:[I
 
     sget-object v1, Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;->LockedOut:Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;
 

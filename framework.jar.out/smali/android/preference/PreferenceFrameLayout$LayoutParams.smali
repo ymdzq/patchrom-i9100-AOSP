@@ -13,12 +13,6 @@
     name = "LayoutParams"
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/preference/PreferenceFrameLayout$LayoutParams$Injector;
-    }
-.end annotation
-
 
 # instance fields
 .field public removeBorders:Z

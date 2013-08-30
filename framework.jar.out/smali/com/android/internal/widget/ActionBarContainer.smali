@@ -188,7 +188,6 @@
 .end method
 
 
-# virtual methods
 .method protected getActionBarView()Lcom/android/internal/widget/ActionBarView;
     .locals 1
     .annotation build Landroid/annotation/MiuiHook;

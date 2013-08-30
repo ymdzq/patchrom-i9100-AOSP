@@ -1,0 +1,23 @@
+From 3da5b4efcde9c1059bb942162847b415d55ef66a Mon Sep 17 00:00:00 2001
+From: ymdzq <233900743@qq.com>
+Date: Fri, 30 Aug 2013 19:30:05 +0800
+Subject: [PATCH] add manufacturer_settings icon
+
+---
+ Settings/res/xml/settings_headers.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -46,7 +46,7 @@
+     <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
+         <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
+     </header>
+-    <header android:id="@id/manufacturer_settings">
++    <header android:icon="@drawable/ic_wifi_more_settings" android:id="@id/manufacturer_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
+     <header android:title="@string/header_category_system" />
+-- 
+1.8.1.2
+

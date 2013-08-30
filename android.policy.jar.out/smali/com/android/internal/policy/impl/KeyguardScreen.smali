@@ -15,6 +15,3 @@
 
 .method public abstract onResume()V
 .end method
-
-.method public abstract suspendRecreate()Z
-.end method

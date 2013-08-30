@@ -11,7 +11,7 @@ local-phone-apps = ApplicationsProvider \
                    HTMLViewer \
                    InputDevices \
                    KeyChain \
-		           LatinIME \
+		   LatinIME \
                    LiveWallpapersPicker \
                    MagicSmokeWallpapers \
                    MediaProvider \

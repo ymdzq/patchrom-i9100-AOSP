@@ -129,6 +129,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mIconView:Landroid/widget/ImageView;
 
+    .line 1291
     return-void
 .end method
 
@@ -593,6 +594,7 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 1279
     :cond_0
     return-void
 .end method
@@ -624,6 +626,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 1260
     return-void
 
     .line 1259

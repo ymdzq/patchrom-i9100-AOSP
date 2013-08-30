@@ -429,7 +429,7 @@
     invoke-virtual {p1, v0}, Landroid/content/Intent;->putExtras(Landroid/content/Intent;)Landroid/content/Intent;
 
     .line 311
-    const-string v0, "com.android.settings.quicklaunch.TITLE"
+    const-string v0, "com.android.OriginalSettings.quicklaunch.TITLE"
 
     invoke-virtual {p1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

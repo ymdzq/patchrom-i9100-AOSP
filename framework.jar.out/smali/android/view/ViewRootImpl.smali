@@ -15320,12 +15320,13 @@
     invoke-direct {v1}, Landroid/view/InputChannel;-><init>()V
 
     iput-object v1, p0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;
+
+    .line 548
     :cond_5
     invoke-virtual {p0}, Landroid/view/ViewRootImpl;->createInputChannelAnyWay()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 548
     :try_start_1
     iget-object v1, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
@@ -15821,7 +15822,6 @@
 
     iput-object v1, p0, Landroid/view/ViewRootImpl;->mInputQueueCallback:Landroid/view/InputQueue$Callback;
 
-    .line 621
     :cond_c
     invoke-virtual {p0}, Landroid/view/ViewRootImpl;->discardInputChannelBySetting()V
 
@@ -15829,12 +15829,10 @@
 
     if-eqz v1, :cond_d
 
-    .line 622
     iget-object v1, p0, Landroid/view/ViewRootImpl;->mInputQueueCallback:Landroid/view/InputQueue$Callback;
 
     if-eqz v1, :cond_10
 
-    .line 623
     new-instance v1, Landroid/view/InputQueue;
 
     iget-object v2, p0, Landroid/view/ViewRootImpl;->mInputChannel:Landroid/view/InputChannel;

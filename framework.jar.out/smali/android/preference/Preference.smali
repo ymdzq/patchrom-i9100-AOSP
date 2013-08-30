@@ -11,7 +11,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/preference/Preference$BaseSavedState;,
-        Landroid/preference/Preference$Injector;,
         Landroid/preference/Preference$OnPreferenceChangeInternalListener;,
         Landroid/preference/Preference$OnPreferenceClickListener;,
         Landroid/preference/Preference$OnPreferenceChangeListener;
@@ -422,28 +421,6 @@
         :pswitch_d
         :pswitch_5
     .end packed-switch
-.end method
-
-.method static synthetic access$000(Landroid/preference/Preference;)Landroid/content/Context;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 79
-    iget-object v0, p0, Landroid/preference/Preference;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic access$100(Landroid/preference/Preference;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 79
-    iget v0, p0, Landroid/preference/Preference;->mWidgetLayoutResId:I
-
-    return v0
 .end method
 
 .method private dispatchSetInitialValue()V
@@ -1766,9 +1743,6 @@
 .method protected onBindView(Landroid/view/View;)V
     .locals 9
     .parameter "view"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     const/16 v6, 0x8

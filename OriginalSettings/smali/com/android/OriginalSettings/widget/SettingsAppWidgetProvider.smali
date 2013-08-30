@@ -51,9 +51,9 @@
     .line 52
     new-instance v0, Landroid/content/ComponentName;
 
-    const-string v1, "com.android.settings"
+    const-string v1, "com.android.OriginalSettings"
 
-    const-string v2, "com.android.settings.widget.SettingsAppWidgetProvider"
+    const-string v2, "com.android.OriginalSettings.widget.SettingsAppWidgetProvider"
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

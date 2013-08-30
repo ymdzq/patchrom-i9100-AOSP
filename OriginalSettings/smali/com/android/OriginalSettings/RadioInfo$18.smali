@@ -45,7 +45,7 @@
     .line 977
     new-instance v1, Landroid/content/Intent;
 
-    const-string v2, "com.android.settings.OEM_RADIO_INFO"
+    const-string v2, "com.android.OriginalSettings.OEM_RADIO_INFO"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

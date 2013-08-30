@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+.field static final synthetic $SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sput-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;->APP:Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;->SCREEN:Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;
 
@@ -67,7 +67,7 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;->WIFI:Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;
 
@@ -83,7 +83,7 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;->BLUETOOTH:Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;
 
@@ -99,7 +99,7 @@
 
     :goto_3
     :try_start_4
-    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$settings$fuelgauge$PowerUsageDetail$DrainType:[I
+    sget-object v0, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$2;->$SwitchMap$com$android$OriginalSettings$fuelgauge$PowerUsageDetail$DrainType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;->CELL:Lcom/android/OriginalSettings/fuelgauge/PowerUsageDetail$DrainType;
 

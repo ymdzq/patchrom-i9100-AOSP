@@ -1,2 +1,4 @@
 #!/system/bin/sh
-chmod 600 /dev/exynos-mem
+mkdir -p /data/system
+chgrp system /data/system
+chown system /data/system

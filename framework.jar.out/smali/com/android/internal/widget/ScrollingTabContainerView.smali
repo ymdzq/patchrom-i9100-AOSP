@@ -12,8 +12,7 @@
         Lcom/android/internal/widget/ScrollingTabContainerView$VisibilityAnimListener;,
         Lcom/android/internal/widget/ScrollingTabContainerView$TabClickListener;,
         Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;,
-        Lcom/android/internal/widget/ScrollingTabContainerView$TabView;,
-        Lcom/android/internal/widget/ScrollingTabContainerView$Injector;
+        Lcom/android/internal/widget/ScrollingTabContainerView$TabView;
     }
 .end annotation
 

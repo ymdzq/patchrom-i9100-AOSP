@@ -219,7 +219,7 @@
 
     if-nez v2, :cond_2
 
-    const-string v2, "com.android.settings.bluetooth.action.DOCK_SHOW_UI"
+    const-string v2, "com.android.OriginalSettings.bluetooth.action.DOCK_SHOW_UI"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 

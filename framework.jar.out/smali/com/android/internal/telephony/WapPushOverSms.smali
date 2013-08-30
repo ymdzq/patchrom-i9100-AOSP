@@ -94,9 +94,6 @@
 .method public dispatchWapPdu([B)I
     .locals 24
     .parameter "pdu"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     .line 139
@@ -481,7 +478,6 @@
 
     invoke-static {v0, v6, v13, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    
     goto :goto_1
 
     .end local v6           #dataIndex:I

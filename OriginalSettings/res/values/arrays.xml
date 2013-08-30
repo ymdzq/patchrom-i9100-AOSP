@@ -157,17 +157,17 @@
         <item>Blocked</item>
         <item>Temporarily avoiding poor connection</item>
     </string-array>
-    <array name="wifi_security">
+    <string-array name="wifi_security">
         <item>@string/wifi_security_none</item>
         <item>@string/wifi_security_wep</item>
         <item>@string/wifi_security_psk_generic</item>
         <item>@string/wifi_security_eap</item>
-    </array>
-    <array name="wifi_security_no_eap">
+    </string-array>
+    <string-array name="wifi_security_no_eap">
         <item>@string/wifi_security_none</item>
         <item>@string/wifi_security_wep</item>
         <item>@string/wifi_security_psk_generic</item>
-    </array>
+    </string-array>
     <string-array name="wifi_ap_security">
         <item>Open</item>
         <item>WPA PSK</item>
@@ -447,14 +447,14 @@
         <item>2</item>
         <item>1</item>
     </string-array>
-    <array name="input_method_selector_titles">
+    <string-array name="input_method_selector_titles">
         <item>@string/input_method_selector_show_automatically_title</item>
         <item>@string/input_method_selector_always_show_title</item>
         <item>@string/input_method_selector_always_hide_title</item>
-    </array>
-    <array name="input_method_selector_values">
+    </string-array>
+    <string-array name="input_method_selector_values">
         <item>@string/input_method_selector_show_automatically_value</item>
         <item>@string/input_method_selector_always_show_value</item>
         <item>@string/input_method_selector_always_hide_value</item>
-    </array>
+    </string-array>
 </resources>

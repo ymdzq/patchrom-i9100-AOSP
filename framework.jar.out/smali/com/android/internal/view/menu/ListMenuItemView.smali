@@ -6,14 +6,6 @@
 .implements Lcom/android/internal/view/menu/MenuView$ItemView;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/android/internal/view/menu/ListMenuItemView$Injector;
-    }
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "ListMenuItemView"
 
@@ -466,11 +458,8 @@
 .end method
 
 .method public setCheckable(Z)V
-    .locals 6
+    .locals 5
     .parameter "checkable"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     const/16 v3, 0x8
@@ -533,13 +522,13 @@
 
     iget-object v4, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
 
-    iget-object v5, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
 
-    invoke-virtual {v5}, Lcom/android/internal/view/menu/MenuItemImpl;->isChecked()Z
+    invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->isChecked()Z
 
-    move-result v5
+    move-result v1
 
-    invoke-static {p0, v4, v5}, Lcom/android/internal/view/menu/ListMenuItemView$Injector;->checkTextColor(Lcom/android/internal/view/menu/ListMenuItemView;Landroid/widget/TextView;Z)V
+    invoke-static {p0, v4, v1}, Lcom/android/internal/view/menu/ListMenuItemView$Injector;->checkTextColor(Lcom/android/internal/view/menu/ListMenuItemView;Landroid/widget/TextView;Z)V
 
     .line 151
     if-eqz p1, :cond_6
@@ -628,9 +617,6 @@
 .method public setChecked(Z)V
     .locals 2
     .parameter "checked"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
 
     .prologue
     .line 169

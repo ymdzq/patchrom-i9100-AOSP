@@ -19,5 +19,5 @@
     <dimen name="default_app_widget_padding_top">4.0dip</dimen>
     <dimen name="default_app_widget_padding_right">12.0dip</dimen>
     <dimen name="default_app_widget_padding_bottom">20.0dip</dimen>
-    <dimen name="navigation_bar_height_portrait">@dimen/navigation_bar_height</dimen>
+    <item type="dimen" name="navigation_bar_height_portrait">@dimen/navigation_bar_height</item>
 </resources>

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+.field static final synthetic $SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sput-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     sget-object v1, Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;->SYSTEM:Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     sget-object v1, Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;->USER:Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;
 

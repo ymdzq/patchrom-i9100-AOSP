@@ -540,6 +540,7 @@
 
     goto/16 :goto_0
 
+    .line 39
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

@@ -6,7 +6,7 @@
         <com.android.camera.ui.RotateLayout android:id="@id/recording_time_rect" style="@style/ViewfinderLabelLayout">
             <include android:id="@id/labels" layout="@layout/viewfinder_labels_video" />
         </com.android.camera.ui.RotateLayout>
-        <ImageView android:id="@id/review_image" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/review_image" android:background="@*android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <com.android.camera.ui.RotateImageView android:id="@id/btn_play" android:visibility="gone" android:src="@drawable/ic_gallery_play_big" android:layout_centerInParent="true" android:onClick="onReviewPlayClicked" style="@style/ReviewControlIcon" />
     </com.android.camera.PreviewFrameLayout>
     <ImageView android:id="@id/capture_anim_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layerType="hardware" />

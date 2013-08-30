@@ -413,7 +413,7 @@
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
     .line 141
-    const-string v2, "com.android.settings.bluetooth.action.DOCK_SHOW_UI"
+    const-string v2, "com.android.OriginalSettings.bluetooth.action.DOCK_SHOW_UI"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 

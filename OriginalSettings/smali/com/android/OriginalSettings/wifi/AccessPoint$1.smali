@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+.field static final synthetic $SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+    sput-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;->WPA:Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;->WPA2:Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;
 
@@ -67,7 +67,7 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;->WPA_WPA2:Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;
 
@@ -83,7 +83,7 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
     sget-object v1, Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;->UNKNOWN:Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;
 

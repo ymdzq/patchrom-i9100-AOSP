@@ -46,7 +46,7 @@
 
     move-result-object v4
 
-    const-string v5, "com.android.settings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON"
+    const-string v5, "com.android.OriginalSettings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -90,7 +90,7 @@
 
     move-result-object v4
 
-    const-string v5, "com.android.settings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON_AND_DISCOVERABLE"
+    const-string v5, "com.android.OriginalSettings.bluetooth.ACTION_INTERNAL_REQUEST_BT_ON_AND_DISCOVERABLE"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

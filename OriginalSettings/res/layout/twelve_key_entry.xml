@@ -17,8 +17,8 @@
         <Button android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:id="@id/nine" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip">
-        <Button android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/ok" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@android:string/ok" android:layout_weight="1.0" />
+        <Button android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/ok" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@*android:string/ok" android:layout_weight="1.0" />
         <Button android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:id="@id/zero" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
-        <Button android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/cancel" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@android:string/cancel" android:layout_weight="1.0" />
+        <Button android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/cancel" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@*android:string/cancel" android:layout_weight="1.0" />
     </LinearLayout>
 </LinearLayout>

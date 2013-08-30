@@ -1473,6 +1473,7 @@
     .line 1050
     iput-object p1, p0, Landroid/app/Notification$Builder;->mContentTitle:Ljava/lang/CharSequence;
 
+    .line 1051
     return-object p0
 .end method
 

@@ -11,7 +11,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/preference/PreferenceActivity$Header;,
-        Landroid/preference/PreferenceActivity$Injector;,
         Landroid/preference/PreferenceActivity$HeaderAdapter;
     }
 .end annotation

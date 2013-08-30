@@ -3227,7 +3227,7 @@
     .local v3, pm:Landroid/content/pm/PackageManager;
     new-instance v1, Landroid/content/Intent;
 
-    const-string v4, "com.android.settings.OEM_RADIO_INFO"
+    const-string v4, "com.android.OriginalSettings.OEM_RADIO_INFO"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

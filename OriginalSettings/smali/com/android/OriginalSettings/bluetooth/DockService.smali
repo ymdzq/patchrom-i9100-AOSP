@@ -1890,7 +1890,7 @@
     .line 444
     .end local v1           #msgType:I
     :pswitch_1
-    const-string v3, "com.android.settings.bluetooth.action.DOCK_SHOW_UI"
+    const-string v3, "com.android.OriginalSettings.bluetooth.action.DOCK_SHOW_UI"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 

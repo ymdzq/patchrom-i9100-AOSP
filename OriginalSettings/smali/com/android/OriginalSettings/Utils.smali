@@ -899,7 +899,7 @@
     if-eqz v6, :cond_0
 
     .line 242
-    const-string v12, "com.android.settings.icon"
+    const-string v12, "com.android.OriginalSettings.icon"
 
     invoke-virtual {v6, v12}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -910,7 +910,7 @@
     move-result-object v2
 
     .line 243
-    const-string v12, "com.android.settings.title"
+    const-string v12, "com.android.OriginalSettings.title"
 
     invoke-virtual {v6, v12}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -921,7 +921,7 @@
     move-result-object v11
 
     .line 244
-    const-string v12, "com.android.settings.summary"
+    const-string v12, "com.android.OriginalSettings.summary"
 
     invoke-virtual {v6, v12}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 

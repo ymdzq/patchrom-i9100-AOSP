@@ -3899,7 +3899,7 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
+    iget-object v2, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
 
     iget-object v2, v2, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
 

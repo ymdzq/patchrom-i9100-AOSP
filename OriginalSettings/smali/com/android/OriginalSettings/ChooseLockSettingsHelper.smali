@@ -78,9 +78,9 @@
 
     .line 104
     .local v0, intent:Landroid/content/Intent;
-    const-string v1, "com.android.settings"
+    const-string v1, "com.android.OriginalSettings"
 
-    const-string v2, "com.android.settings.ConfirmLockPassword"
+    const-string v2, "com.android.OriginalSettings.ConfirmLockPassword"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -149,19 +149,19 @@
 
     .line 85
     .local v0, intent:Landroid/content/Intent;
-    const-string v1, "com.android.settings.ConfirmLockPattern.header"
+    const-string v1, "com.android.OriginalSettings.ConfirmLockPattern.header"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
     .line 86
-    const-string v1, "com.android.settings.ConfirmLockPattern.footer"
+    const-string v1, "com.android.OriginalSettings.ConfirmLockPattern.footer"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
     .line 87
-    const-string v1, "com.android.settings"
+    const-string v1, "com.android.OriginalSettings"
 
-    const-string v2, "com.android.settings.ConfirmLockPattern"
+    const-string v2, "com.android.OriginalSettings.ConfirmLockPattern"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

@@ -11,6 +11,6 @@
             <TextView android:textSize="14.0sp" android:id="@id/footerText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:layout_above="@id/buttonContainer" android:layout_centerHorizontal="true" />
         </RelativeLayout>
     </LinearLayout>
-    <View android:background="@android:drawable/code_lock_left" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+    <View android:background="@*android:drawable/code_lock_left" android:layout_width="2.0dip" android:layout_height="fill_parent" />
     <com.android.internal.widget.LockPatternView android:id="@id/lockPattern" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>

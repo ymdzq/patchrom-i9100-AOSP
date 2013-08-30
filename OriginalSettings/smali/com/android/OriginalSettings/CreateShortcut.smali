@@ -31,7 +31,7 @@
 
     .line 30
     .local v0, targetIntent:Landroid/content/Intent;
-    const-string v1, "com.android.settings.SHORTCUT"
+    const-string v1, "com.android.OriginalSettings.SHORTCUT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 

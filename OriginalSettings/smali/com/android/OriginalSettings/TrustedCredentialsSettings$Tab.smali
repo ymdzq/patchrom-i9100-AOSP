@@ -301,7 +301,7 @@
     const/4 v0, 0x0
 
     .line 92
-    sget-object v1, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sget-object v1, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     invoke-virtual {p0}, Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;->ordinal()I
 
@@ -358,7 +358,7 @@
 
     .prologue
     .line 83
-    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     invoke-virtual {p0}, Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;->ordinal()I
 
@@ -408,7 +408,7 @@
 
     .prologue
     .line 113
-    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     invoke-virtual {p0}, Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;->ordinal()I
 
@@ -469,7 +469,7 @@
 
     .prologue
     .line 101
-    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$TrustedCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/OriginalSettings/TrustedCredentialsSettings$4;->$SwitchMap$com$android$OriginalSettings$TrustedCredentialsSettings$Tab:[I
 
     invoke-virtual {p0}, Lcom/android/OriginalSettings/TrustedCredentialsSettings$Tab;->ordinal()I
 

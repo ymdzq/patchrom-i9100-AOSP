@@ -4495,25 +4495,20 @@
     :catch_1
     move-exception v18
 
-    .line 399
     .local v18, e:Landroid/os/RemoteException;
     const/16 v22, 0x0
 
-    .line 401
     if-eqz v3, :cond_9
 
-    .line 402
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Landroid/content/ContentResolver;->releaseUnstableProvider(Landroid/content/IContentProvider;)Z
 
-    .line 404
     :cond_9
     if-eqz v10, :cond_0
 
     goto :goto_2
 
-    .line 401
     .end local v18           #e:Landroid/os/RemoteException;
     :catch_miui_0
     move-exception v24
@@ -4559,21 +4554,17 @@
 
     if-eqz v3, :cond_a
 
-    .line 402
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Landroid/content/ContentResolver;->releaseUnstableProvider(Landroid/content/IContentProvider;)Z
 
-    .line 404
     :cond_a
     if-eqz v10, :cond_b
 
-    .line 405
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v10}, Landroid/content/ContentResolver;->releaseProvider(Landroid/content/IContentProvider;)Z
 
-    .line 401
     :cond_b
     throw v4
 .end method

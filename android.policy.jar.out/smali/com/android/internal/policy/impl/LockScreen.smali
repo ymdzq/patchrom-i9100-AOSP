@@ -1060,16 +1060,6 @@
     return-void
 .end method
 
-.method public suspendRecreate()Z
-    .locals 1
-
-    .prologue
-    .line 579
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method updateConfiguration()V
     .locals 3
 

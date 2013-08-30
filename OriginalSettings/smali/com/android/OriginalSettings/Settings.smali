@@ -191,7 +191,7 @@
     :cond_1
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v4, "com.android.settings.TOP_LEVEL_HEADER_ID"
+    const-string v4, "com.android.OriginalSettings.TOP_LEVEL_HEADER_ID"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -202,7 +202,7 @@
     .line 508
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v4, "com.android.settings.FRAGMENT_CLASS"
+    const-string v4, "com.android.OriginalSettings.FRAGMENT_CLASS"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -213,7 +213,7 @@
     .line 511
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v4, "com.android.settings.PARENT_FRAGMENT_TITLE"
+    const-string v4, "com.android.OriginalSettings.PARENT_FRAGMENT_TITLE"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -223,7 +223,7 @@
     .local v2, parentHeaderTitleRes:I
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v4, "com.android.settings.PARENT_FRAGMENT_CLASS"
+    const-string v4, "com.android.OriginalSettings.PARENT_FRAGMENT_CLASS"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -694,7 +694,7 @@
     .line 240
     iget-object v7, v5, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v8, "com.android.settings.FRAGMENT_CLASS"
+    const-string v8, "com.android.OriginalSettings.FRAGMENT_CLASS"
 
     invoke-virtual {v7, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -742,7 +742,7 @@
 
     iget-object v8, v5, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v9, "com.android.settings.PARENT_FRAGMENT_CLASS"
+    const-string v9, "com.android.OriginalSettings.PARENT_FRAGMENT_CLASS"
 
     invoke-virtual {v8, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -755,7 +755,7 @@
 
     iget-object v8, v5, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string v9, "com.android.settings.PARENT_FRAGMENT_TITLE"
+    const-string v9, "com.android.OriginalSettings.PARENT_FRAGMENT_TITLE"
 
     invoke-virtual {v8, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1254,7 +1254,7 @@
 
     .line 313
     :cond_2
-    const-string v1, "com.android.settings.ManageApplications"
+    const-string v1, "com.android.OriginalSettings.ManageApplications"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1262,7 +1262,7 @@
 
     if-nez v1, :cond_3
 
-    const-string v1, "com.android.settings.RunningServices"
+    const-string v1, "com.android.OriginalSettings.RunningServices"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1270,7 +1270,7 @@
 
     if-nez v1, :cond_3
 
-    const-string v1, "com.android.settings.applications.StorageUse"
+    const-string v1, "com.android.OriginalSettings.applications.StorageUse"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1605,7 +1605,7 @@
     if-eqz p1, :cond_3
 
     .line 147
-    const-string v0, "com.android.settings.CURRENT_HEADER"
+    const-string v0, "com.android.OriginalSettings.CURRENT_HEADER"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -1616,7 +1616,7 @@
     iput-object v0, p0, Lcom/android/OriginalSettings/Settings;->mCurrentHeader:Landroid/preference/PreferenceActivity$Header;
 
     .line 148
-    const-string v0, "com.android.settings.PARENT_HEADER"
+    const-string v0, "com.android.OriginalSettings.PARENT_HEADER"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -1999,7 +1999,7 @@
     if-eqz v0, :cond_0
 
     .line 178
-    const-string v0, "com.android.settings.CURRENT_HEADER"
+    const-string v0, "com.android.OriginalSettings.CURRENT_HEADER"
 
     iget-object v1, p0, Lcom/android/OriginalSettings/Settings;->mCurrentHeader:Landroid/preference/PreferenceActivity$Header;
 
@@ -2012,7 +2012,7 @@
     if-eqz v0, :cond_1
 
     .line 181
-    const-string v0, "com.android.settings.PARENT_HEADER"
+    const-string v0, "com.android.OriginalSettings.PARENT_HEADER"
 
     iget-object v1, p0, Lcom/android/OriginalSettings/Settings;->mParentHeader:Landroid/preference/PreferenceActivity$Header;
 

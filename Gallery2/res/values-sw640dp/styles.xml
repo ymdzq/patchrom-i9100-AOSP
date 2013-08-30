@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="PanoCustomDialogText">
-        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textAppearance">@*android:style/TextAppearance.Large</item>
     </style>
     <style name="PopupTitleText">
         <item name="android:textSize">@dimen/popup_title_text_size</item>

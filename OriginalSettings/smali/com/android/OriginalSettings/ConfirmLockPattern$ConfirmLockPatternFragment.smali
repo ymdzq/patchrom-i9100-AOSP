@@ -252,7 +252,7 @@
     const/4 v2, 0x1
 
     .line 184
-    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$settings$ConfirmLockPattern$Stage:[I
+    sget-object v0, Lcom/android/OriginalSettings/ConfirmLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ConfirmLockPattern$Stage:[I
 
     invoke-virtual {p1}, Lcom/android/OriginalSettings/ConfirmLockPattern$Stage;->ordinal()I
 
@@ -519,7 +519,7 @@
     if-eqz v0, :cond_0
 
     .line 127
-    const-string v3, "com.android.settings.ConfirmLockPattern.header"
+    const-string v3, "com.android.OriginalSettings.ConfirmLockPattern.header"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
 
@@ -528,7 +528,7 @@
     iput-object v3, p0, Lcom/android/OriginalSettings/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderText:Ljava/lang/CharSequence;
 
     .line 128
-    const-string v3, "com.android.settings.ConfirmLockPattern.footer"
+    const-string v3, "com.android.OriginalSettings.ConfirmLockPattern.footer"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
 
@@ -537,7 +537,7 @@
     iput-object v3, p0, Lcom/android/OriginalSettings/ConfirmLockPattern$ConfirmLockPatternFragment;->mFooterText:Ljava/lang/CharSequence;
 
     .line 129
-    const-string v3, "com.android.settings.ConfirmLockPattern.header_wrong"
+    const-string v3, "com.android.OriginalSettings.ConfirmLockPattern.header_wrong"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
 
@@ -546,7 +546,7 @@
     iput-object v3, p0, Lcom/android/OriginalSettings/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderWrongText:Ljava/lang/CharSequence;
 
     .line 130
-    const-string v3, "com.android.settings.ConfirmLockPattern.footer_wrong"
+    const-string v3, "com.android.OriginalSettings.ConfirmLockPattern.footer_wrong"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->getCharSequenceExtra(Ljava/lang/String;)Ljava/lang/CharSequence;
 

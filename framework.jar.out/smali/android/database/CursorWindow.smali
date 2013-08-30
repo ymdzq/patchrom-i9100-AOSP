@@ -693,14 +693,11 @@
 
     if-nez v0, :cond_0
 
-    .line 731
     monitor-exit v1
 
-    .line 735
     :goto_0
     return-void
 
-    .line 733
     :cond_0
     sget-object v0, Landroid/database/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
@@ -710,7 +707,6 @@
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 734
     monitor-exit v1
 
     goto :goto_0
@@ -780,16 +776,13 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
     :cond_0
     invoke-static {p1}, Landroid/database/CursorWindow$Injector;->addQuota(I)V
 
     monitor-exit v1
 
-    .line 725
     return-void
 
-    .line 724
     :catchall_0
     move-exception v0
 

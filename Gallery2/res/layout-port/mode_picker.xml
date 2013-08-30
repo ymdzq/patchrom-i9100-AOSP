@@ -7,7 +7,7 @@
             <com.android.camera.ui.RotateImageView android:id="@id/mode_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_switch_camera_holo_light" android:scaleType="fitCenter" android:layout_centerInParent="true" android:contentDescription="@string/empty" />
             <com.android.camera.ui.RotateImageView android:id="@id/mode_2" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_switch_pan_holo_light" android:scaleType="fitCenter" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/empty" />
         </RelativeLayout>
-        <View android:background="@android:color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        <View android:background="@*android:color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
     </RelativeLayout>
     <LinearLayout android:orientation="horizontal" android:id="@id/mode_selection" android:background="@drawable/bg_switcher" android:visibility="gone" android:layout_width="163.0dip" android:layout_height="fill_parent">
         <com.android.camera.ui.RotateImageView android:id="@id/mode_camera" android:background="@drawable/bg_pressed" android:layout_width="54.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_switch_camera_holo_light" android:scaleType="center" android:contentDescription="@string/accessibility_switch_to_camera" />

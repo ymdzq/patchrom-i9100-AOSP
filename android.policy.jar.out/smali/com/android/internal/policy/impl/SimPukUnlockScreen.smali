@@ -919,16 +919,6 @@
     return-void
 .end method
 
-.method public suspendRecreate()Z
-    .locals 1
-
-    .prologue
-    .line 121
-    iget-boolean v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mSimCheckInProgress:Z
-
-    return v0
-.end method
-
 .method updateConfiguration()V
     .locals 3
 

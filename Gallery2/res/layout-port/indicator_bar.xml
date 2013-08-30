@@ -7,7 +7,7 @@
             <com.android.camera.ui.RotateImageView android:id="@id/second_level_indicator" android:background="@drawable/bg_pressed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_settings_holo_light" android:contentDescription="@string/accessibility_second_level_indicators" />
         </com.android.camera.ui.IndicatorControlBar>
         <com.android.camera.ui.SecondLevelIndicatorControlBar android:id="@id/second_level_indicator_bar" android:background="@color/indicator_background" android:paddingLeft="@dimen/indicator_bar_padding" android:paddingRight="@dimen/indicator_bar_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true">
-            <View android:id="@id/divider" android:background="@android:color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <View android:id="@id/divider" android:background="@*android:color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" />
             <com.android.camera.ui.TwoStateImageView android:id="@id/back_to_first_level" android:background="@drawable/bg_pressed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/btn_close_settings" android:contentDescription="@string/accessibility_back_to_first_level" />
         </com.android.camera.ui.SecondLevelIndicatorControlBar>
     </RelativeLayout>
