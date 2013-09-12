@@ -16,6 +16,8 @@
     <item type="drawable" name="screen_background_light_transparent">#80ffffff</item>
     <item type="drawable" name="dialog_holo_dark_frame">@drawable/dialog_full_holo_dark</item>
     <item type="drawable" name="dialog_holo_light_frame">@drawable/dialog_full_holo_light</item>
+    <item type="drawable" name="notification_bg">#00000000</item>
+    <item type="drawable" name="notification_bg_low">#00000000</item>
     <item type="drawable" name="status_bar_closed_default_background">#ff000000</item>
     <item type="drawable" name="status_bar_opened_default_background">#ff000000</item>
     <item type="drawable" name="notification_item_background_color">#ff111111</item>
